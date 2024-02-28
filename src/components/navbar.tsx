@@ -1,7 +1,9 @@
+import { qs, qsAll } from "../helper/helper";
+import "../styles/components/navbar.css";
 
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg">
+        <nav className="navbar navbar-expand-lg" data-bs-theme="dark">
             <div className="container-fluid">
                 <a className="navbar-brand" href="index.html">
                     WeSoft<span id="span_lio">Qc</span>
@@ -16,22 +18,48 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-1 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link" target="_self" href="#">Accueil</a>
+                            <a className="nav-link" target="_self" href="#">Home</a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link" target="_self" href="#education">Nos Services</a>
+                        <a className="nav-link" target="_self" href="#education">Games</a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link" target="_self" href="#equip">Notre équipe</a>
+                        <a className="nav-link" target="_self" href="#equip">Team</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" target="_self" href="#">À propos</a>
+                            <a className="nav-link" target="_self" href="#">Careers</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     );
+}
+
+export class ScrollHandler {
+    constructor() {
+        window.addEventListener('scroll', () => {
+            const navbar = qs('.navbar') as HTMLElement;
+            const navLinks = qsAll('.nav-link') as NodeListOf<HTMLAnchorElement>;
+            const spanLio = qs('#span_lio') as HTMLSpanElement;
+            const toggler = qsAll('.toggler-icon') as NodeListOf<HTMLSpanElement>;
+            if (window.scrollY > 20) {
+                if (navbar) navbar.classList.add('sticky');
+                navLinks.forEach(element => element.classList.add('scroll'));
+                if (spanLio) spanLio.classList.add('span-sticky');
+                if (toggler) {
+                    toggler.forEach(element => element.classList.add('toggle-on'));
+                }
+            } else {
+                if (navbar) navbar.classList.remove('sticky');
+                navLinks.forEach(element => element.classList.remove('scroll'));
+                if (spanLio) spanLio.classList.remove('span-sticky');
+                if (toggler) {
+                    toggler.forEach(element => element.classList.remove('toggle-on'));
+                }
+            }
+        });
+    }
 }
 
 export default Navbar;

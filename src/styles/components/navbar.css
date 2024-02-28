@@ -1,0 +1,149 @@
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    background: transparent;
+    font-family: 'Ubuntu', sans-serif!important;
+    z-index: 5;
+    transition: all ease 0.4s;
+}
+
+.navbar.sticky{
+    padding: 8px 0;
+    background: var(--clr-spot);
+}
+
+.navbar .container-fluid{
+    width: 1600px;
+    max-width: 1600px;
+    padding: 0 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .navbar-nav{
+    display: flex;
+    gap: 2.5rem;
+}
+
+.navbar .navbar-brand{
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.navbar .navbar-brand span{
+    color: var(--primary-color);
+    transition: all ease 0.4s;
+}
+
+.span-sticky{
+    color: #fff!important;
+}
+
+.navbar .navbar-nav li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .navbar-nav li a{
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 4px!important;
+}
+
+.navbar .navbar-nav li a:hover {
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 1100px){
+    .navbar .container-fluid{
+        justify-content: space-between!important;
+        padding: 0 10px;
+    }
+    .navbar-nav{
+        gap: 1rem!important;
+    }
+
+    .navbar-brand {
+        font-size: 2em!important;
+    }
+
+    @media screen and (max-width: 425px) {
+        .navbar-brand {
+            font-size: 1.5em!important;
+        }
+    }
+}
+
+/* Navbar toggler */
+
+.navbar-toggler {
+    border: 0 !important;
+    margin-right: 10px !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+
+.toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: var(--clr-spot);
+    display: block;
+    transition: all 0.2s;
+    margin: 5px 0 !important;
+}
+
+.top-bar,
+.middle-bar,
+.bottom-bar {
+    background-color: #fff !important;
+}
+
+.middle-bar {
+    margin: 5px auto;
+}
+
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+    background: var(--clr-spot)!important;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+    background: var(--clr-spot)!important;
+}
+
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+
+.toggle-on:nth-child(1),
+.toggle-on:nth-child(3) {
+    background: var(--clr-white)!important;
+}
