@@ -1,11 +1,9 @@
-import { DarkMode } from "./utils/darkmode"
+import Navbar from "./components/navbar";
 
 function App() {
   return (
     <>
-      <div>
-        <DarkMode />
-      </div>
+      <Navbar/>
     </>
   )
 }

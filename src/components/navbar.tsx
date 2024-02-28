@@ -1,10 +1,10 @@
 
-function navbar() {
+function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-transparent">
+        <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
                 <a className="navbar-brand" href="index.html">
-                    Ovation Électr<span id="span_lio">ique.</span>
+                    WeSoft<span id="span_lio">Qc</span>
                 </a>
                 <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -33,3 +33,5 @@ function navbar() {
         </nav>
     );
 }
+
+export default Navbar;
