@@ -9,14 +9,14 @@
 }
 
 .navbar.sticky{
-    padding: 8px 0;
-    background: var(--clr-spot);
+    padding: 4px 0;
+    background: var(--primary-color);
 }
 
 .navbar .container-fluid{
-    width: 1600px;
-    max-width: 1600px;
-    padding: 0 80px;
+    width: 1400px;
+    max-width: 1400px;
+    padding: 0 4rem;
     display: flex;
     justify-content: center;
 }
@@ -97,7 +97,7 @@
 .toggler-icon {
     width: 30px;
     height: 3px;
-    background-color: var(--clr-spot);
+    background-color: var(--primary-color);
     display: block;
     transition: all 0.2s;
     margin: 5px 0 !important;
@@ -116,7 +116,7 @@
 .navbar-toggler .top-bar {
     transform: rotate(45deg);
     transform-origin: 10% 10%;
-    background: var(--clr-spot)!important;
+    background: var(--primary-color)!important;
 }
 
 .navbar-toggler .middle-bar {
@@ -127,7 +127,7 @@
 .navbar-toggler .bottom-bar {
     transform: rotate(-45deg);
     transform-origin: 10% 90%;
-    background: var(--clr-spot)!important;
+    background: var(--primary-color)!important;
 }
 
 .navbar-toggler.collapsed .top-bar {

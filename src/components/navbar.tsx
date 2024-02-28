@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import { qs, qsAll } from "../helper/helper";
 import "../styles/components/navbar.css";
 
 function Navbar() {
+
+    useEffect(() => {
+        new ScrollHandler();
+    }, []);
+
     return (
         <nav className="navbar navbar-expand-lg" data-bs-theme="dark">
             <div className="container-fluid">
