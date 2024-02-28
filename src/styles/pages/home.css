@@ -41,11 +41,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 3rem;
 }
 
 .header-quote > h1 {
+    text-align: center;
     color: #fff;
-    font-size: 3em;
+    font-size: clamp(3rem, 3vw, 4rem);
 }
 
 .header-quote > h1 > span {

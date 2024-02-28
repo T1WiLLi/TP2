@@ -22,7 +22,6 @@
 
 .navbar .navbar-nav{
     display: flex;
-    align-items: center;
     gap: 1.5rem;
 }
 
@@ -46,7 +45,6 @@
 
 .navbar .navbar-nav li {
     list-style: none;
-    display: flex;
 }
 
 .navbar .navbar-nav li a {
@@ -137,14 +135,9 @@
     margin: 5px 0 !important;
 }
 
-.top-bar,
-.middle-bar,
-.bottom-bar {
-    background-color: #fff !important;
-}
-
 .middle-bar {
     margin: 5px auto;
+    background-color: #999;
 }
 
 .navbar-toggler .top-bar {
