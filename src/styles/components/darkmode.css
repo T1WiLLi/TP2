@@ -8,7 +8,7 @@
     display: inline-block;
     width: 50px; /* Adjusted width */
     height: 30px; /* Adjusted height */
-    background-color: #f0f0f0;
+    background-color: var(--body-color);
     border-radius: 15px; /* Adjusted border-radius */
     cursor: pointer;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
@@ -35,8 +35,8 @@
 
 .toggle-label::after {
     right: 3px; /* Adjusted position */
-    background-color: #333; /* Default moon color */
-    border: 0.5px solid #444; /* Border for moon */
+    background-color: #444; /* Default moon color */
+    border: 0.5px solid #555; /* Border for moon */
 }
 
 .darkmode-toggle:checked + .toggle-label::before {

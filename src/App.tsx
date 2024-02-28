@@ -1,13 +1,11 @@
-import Navbar from "./components/navbar";
-import "./styles/app.css";
+import Home from "./pages/home"
 
 function App() {
   return (
     <>
-      <Navbar/>
-      <div className="lol"></div>
+      <Home/>
     </>
-  )
+  );
 }
 
 export default App

@@ -2,7 +2,7 @@
     position: fixed;
     width: 100%;
     padding: 20px 0;
-    background: transparent;
+    background-color: var(--body-navbar);
     z-index: 5;
     transition: all ease 0.4s;
 }
@@ -23,11 +23,11 @@
 .navbar .navbar-nav{
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 1.5rem;
 }
 
 .navbar .navbar-brand{
-    color: var(--body-color);
+    color: var(--body-navbar-color);
     font-size: 2.5em;
     font-weight: 700;
 }
@@ -41,7 +41,7 @@
 }
 
 .span-sticky{
-    color: var(--body-color)!important;
+    color: var(--body-navbar-color)!important;
 }
 
 .navbar .navbar-nav li {
@@ -52,7 +52,7 @@
 .navbar .navbar-nav li a {
     position: relative;
     display: inline-block;
-    color: var(--body-color);
+    color: var(--body-navbar-color);
     font-size: 1.2em;
     font-weight: 500;
     padding: 4px!important;
