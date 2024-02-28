@@ -7,10 +7,9 @@
     transition: all ease 0.4s;
 }
 
-.navbar.sticky{
+.navbar.sticky {
     padding: 4px 0;
     background: var(--primary-color);
-    box-shadow: 0px 10px 15px 5px rgb(34, 34, 34, 0.8);
 }
 
 .navbar .container-fluid{
@@ -23,36 +22,45 @@
 
 .navbar .navbar-nav{
     display: flex;
+    align-items: center;
     gap: 2.5rem;
 }
 
 .navbar .navbar-brand{
-    color: #fff;
+    color: var(--body-color);
     font-size: 2.5em;
     font-weight: 700;
 }
 
 .navbar .navbar-brand span{
     color: var(--primary-color);
-    transition: all ease 0.4s;
+}
+
+.navbar.sticky .navbar-brand {
+    color: #fff;
 }
 
 .span-sticky{
-    color: #fff!important;
+    color: var(--body-color)!important;
 }
 
-.navbar .navbar-nav li{
+.navbar .navbar-nav li {
     list-style: none;
-    display: inline-block;
+    display: flex;
 }
 
-.navbar .navbar-nav li a{
+.navbar .navbar-nav li a {
     position: relative;
     display: inline-block;
-    color: #fff;
+    color: var(--body-color);
     font-size: 1.2em;
     font-weight: 500;
     padding: 4px!important;
+    transition: all ease-in-out 0.2s;
+}
+
+.navbar .navbar-nav li a.scroll {
+    color: #fff;
 }
 
 .navbar .navbar-nav li a:hover {
@@ -75,6 +83,10 @@
 .navbar .navbar-nav li a.scroll:hover::after{
     transform: scale(1);
     transform-origin: bottom left;
+}
+
+.navbar .navbar-nav li:last-child a.scroll::after{
+    display: none!important;
 }
 
 .navbar .navbar-nav li a.scroll:hover {

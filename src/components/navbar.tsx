@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { qs, qsAll } from "../helper/helper";
 import "../styles/components/navbar.css";
+import { DarkMode } from "../utils/darkmode";
 
 function Navbar() {
 
@@ -34,6 +35,9 @@ function Navbar() {
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" target="_self" href="#">Careers</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" target="_self" href="#">{<DarkMode/>}</a>
                         </li>
                     </ul>
                 </div>

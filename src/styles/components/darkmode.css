@@ -6,10 +6,10 @@
 .toggle-label {
     position: relative;
     display: inline-block;
-    width: 80px;
-    height: 40px;
+    width: 50px; /* Adjusted width */
+    height: 30px; /* Adjusted height */
     background-color: #f0f0f0;
-    border-radius: 20px;
+    border-radius: 15px; /* Adjusted border-radius */
     cursor: pointer;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Ensure the before and after elements don't overflow */
@@ -21,30 +21,30 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
+    width: 20px; /* Adjusted width */
+    height: 20px; /* Adjusted height */
     border-radius: 50%;
     transition: 0.3s;
 }
 
 .toggle-label::before {
-    left: 5px;
+    left: 3px; /* Adjusted position */
     background-color: var(--primary-color); /* Default sun color */
     border: 0.5px solid #e38d42; /* Border for sun */
 }
 
 .toggle-label::after {
-    right: 5px;
+    right: 3px; /* Adjusted position */
     background-color: #333; /* Default moon color */
     border: 0.5px solid #444; /* Border for moon */
 }
 
 .darkmode-toggle:checked + .toggle-label::before {
-    left: calc(100% - 35px); /* Move sun to the right */
+    left: calc(100% - 23px); /* Adjusted position */
 }
 
 .darkmode-toggle:checked + .toggle-label::after {
-    right: calc(100% - 35px); /* Move moon to the left */
+    right: calc(100% - 23px); /* Adjusted position */
 }
 
 /* Animation for the sun and moon transition */
@@ -52,3 +52,4 @@
 .toggle-label::after {
     transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
+
