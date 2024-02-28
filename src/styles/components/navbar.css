@@ -10,12 +10,12 @@
 .navbar.sticky{
     padding: 4px 0;
     background: var(--primary-color);
-    box-shadow: 0px 5px 7px 0px rgb(34, 34, 34, 0.8);
+    box-shadow: 0px 10px 15px 5px rgb(34, 34, 34, 0.8);
 }
 
 .navbar .container-fluid{
-    width: 1400px;
-    max-width: 1400px;
+    width: 1300px;
+    max-width: 1300px;
     padding: 0 4rem;
     display: flex;
     justify-content: center;
@@ -84,7 +84,7 @@
 @media screen and (max-width: 1100px){
     .navbar .container-fluid{
         justify-content: space-between!important;
-        padding: 0 10px;
+        padding: 0 1rem;
     }
     .navbar-nav{
         gap: 1rem!important;
@@ -167,5 +167,5 @@
 
 .toggle-on:nth-child(1),
 .toggle-on:nth-child(3) {
-    background: var(--clr-white)!important;
+    background: #fff!important;
 }
