@@ -59,6 +59,28 @@
     color: var(--primary-color);
 }
 
+.navbar .navbar-nav li a.scroll::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-out;
+}
+
+.navbar .navbar-nav li a.scroll:hover::after{
+    transform: scale(1);
+    transform-origin: bottom left;
+}
+
+.navbar .navbar-nav li a.scroll:hover {
+    color: #fff;
+}
+
 @media screen and (max-width: 1100px){
     .navbar .container-fluid{
         justify-content: space-between!important;

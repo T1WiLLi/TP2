@@ -57,7 +57,7 @@ html:focus-within {
 body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
-    background-color: var(--body-background);
+    background-color: #fff;
 }
 
 a:not([class]) {
