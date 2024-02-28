@@ -6,12 +6,15 @@ function Home() {
     return (
         <>
             <Navbar/>
-            <header>
-                <div className="header__background"><img src={bg_image} alt="" /></div>
-                <div className="header__intro">
-                    <h1>WeSoft <span>Pixelating Imagination</span></h1>
+            <section className="landing-section">
+                <div className="background-wrapper">
+                    <div className="dark-filter bg"></div>
+                    <img src={bg_image} alt="" />
                 </div>
-            </header>
+                <div className="header-quote">
+                    <h1>We Make <span>Awesome Games</span></h1>
+                </div>
+            </section>
         </>
     );
 }
