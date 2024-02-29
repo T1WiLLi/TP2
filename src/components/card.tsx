@@ -1,5 +1,7 @@
-import React from 'react';
+import { useEffect } from 'react';
+import AOS from 'aos';
 import "../styles/components/card.css";
+import 'aos/dist/aos.css';
 
 interface CardProps {
     id: number;
@@ -18,8 +20,12 @@ const Card: React.FC<CardProps> = ({ id, gameImage, gameName, gameTags, gameDesc
         }
     };
 
+    useEffect(() => {
+        AOS.init({once: true});
+    }, []);
+
     return (
-        <div className="game-card">
+        <div className="game-card" data-aos="fade-right" data-aos-duration="500" data-aos-delay={100 * id}>
             <div className="game-img">
                 <img src={gameImage} alt=""/>
             </div>
@@ -28,7 +34,7 @@ const Card: React.FC<CardProps> = ({ id, gameImage, gameName, gameTags, gameDesc
                 <p className="tags"><span>{gameTags}</span></p>
                 <p className="game-description">
                     {gameDescription}
-                    <span onClick={handleReadMoreClick} data-target={id}>Read More</span>
+                    <span onClick={handleReadMoreClick} data-target={id}> Read More</span>
                 </p>
                 <div className="wrapper">
                     <div className="steam-btn">

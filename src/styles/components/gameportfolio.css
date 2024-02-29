@@ -41,7 +41,19 @@
     margin-top: 15px;
 }
 
+.grow-from-left {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.5s ease;
+}
+
+.grow-from-left.show {
+  transform: scaleX(1);
+}
+
+
 .desc {
     font-size: 1.25em;
     color: var(--body-color);
+    text-align: justify;
 }

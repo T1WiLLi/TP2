@@ -3,7 +3,8 @@
     width: 100%;
     background: var(--card-background);
     box-shadow: var(--card-shadow);
-    height: 22rem;
+    height: 20rem;
+    border-radius: 5px;
 }
 
 .game-img {
@@ -63,6 +64,11 @@
 
 .steam-btn {
     display: inline-block;
+    transition: all ease-in-out 0.1s;
+}
+
+.steam-btn:hover {
+    transform: scale(1.05);
 }
 
 .steam-btn > a {
@@ -113,7 +119,11 @@
     margin: 0 5px 0 0;
     padding: 5px;
     border-radius: 2px;
-    transition: 0.2s;
+    transition: all ease-in-out 0.2s;
+}
+
+.score-card:hover {
+    transform: scale(1.05);
 }
 
 .score {
