@@ -19,7 +19,7 @@
     user-select: none;
 }
 
-.background-wrapper > img {
+.background-wrapper img {
     position: relative;
     display: block;
     width: 100%;
@@ -29,6 +29,14 @@
     filter: brightness(0.5);
     -webkit-user-select: none;
     user-select: none;
+}
+
+.carousel-item {
+    height: 100vh; /* Set height to cover viewport */
+}
+
+.carousel-item img {
+    object-fit: cover; /* Ensure image fills its container */
 }
 
 .header-quote {
