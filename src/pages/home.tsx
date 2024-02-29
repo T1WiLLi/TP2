@@ -8,7 +8,6 @@ function Home() {
             <Navbar/>
             <section className="landing-section">
                 <div className="background-wrapper">
-                    <div className="dark-filter bg"></div>
                     <img src={bg_image} alt="" />
                 </div>
                 <div className="header-quote">

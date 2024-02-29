@@ -1,8 +1,8 @@
 .game-card {
     display: flex;
     width: 100%;
-    margin-bottom: 20px;
     background: var(--card-background);
+    box-shadow: var(--card-shadow);
 }
 
 .game-img {
@@ -107,7 +107,7 @@
     min-width: 90px;
     width: auto;
     height: auto;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background: var(--body-navbar-color);
     text-align: center;
     margin: 0 5px 0 0;
     padding: 5px;
@@ -120,7 +120,7 @@
     font-weight: bold;
     margin-top: 5px;
     padding-bottom: 0;
-    color: #fff;
+    color: var(--body-background);
 }
 
 .score-card p {
@@ -130,7 +130,7 @@
 }
 
 .score-card p:last-child {
-    color: #fff;
+    color: var(--body-background);
     font-size: 14px;
     padding-top: 0;
 }

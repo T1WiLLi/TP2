@@ -15,6 +15,7 @@
     --body-navbar-color: rgb(255, 255, 255, 1);
     --body-color: rgba(255,255,255, 0.87); 
     --card-background: rgb(34, 34, 34, 0.90);
+    --card-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="light"] {
@@ -22,7 +23,8 @@
     --body-navbar: rgb(255, 255, 255, 1);
     --body-navbar-color: rgb(33, 33, 33, 1);
     --body-color: rgba(0,0,0, 0.87);
-    --card-background: rgba(255,255,255, 1)
+    --card-background: rgba(255,255,255, 1);
+    --card-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);;
 }
 
 html {
