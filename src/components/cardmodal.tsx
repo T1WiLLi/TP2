@@ -14,7 +14,7 @@ interface ModalProps {
 
 const CardModal: React.FC<ModalProps> = ({ isOpen, onClose, gameName, gameData }) => {
     if (!isOpen || !gameData.header1 || !gameData.text1 || !gameData.header2 || !gameData.text2) {
-        return null; // If gameData is not properly populated, don't render the modal
+        return null;
     }
 
     return (
