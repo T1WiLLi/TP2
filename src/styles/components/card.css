@@ -58,12 +58,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: fit-content;
 }
 
 .steam-btn {
     display: inline-block;
-    margin: 25px 0 0 0;
 }
 
 .steam-btn > a {
@@ -72,11 +70,11 @@
     min-width: 150px;
     height: auto;
     width: auto;
-    background: #DDD;
+    background: var(--body-color);
     border-radius: 3px;
     padding: 8px;
     border: none;
-    color: #111;
+    color: var(--body-background);
     cursor: pointer;
     transition: 0.2s;
 }
