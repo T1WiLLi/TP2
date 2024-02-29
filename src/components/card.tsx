@@ -1,6 +1,7 @@
 import "../styles/components/card.css";
 
 interface Props {
+    id: number;
     gameImage: string;
     gameName: string;
     gameTags: string;
@@ -8,7 +9,7 @@ interface Props {
     scores: [number, number, number];
 }
 
-function Card({gameImage, gameName, gameTags, gameDescription, scores}: Props) {
+function Card({id, gameImage, gameName, gameTags, gameDescription, scores}: Props) {
     return (
         <div className="game-card">
             <div className="game-img">
@@ -19,7 +20,7 @@ function Card({gameImage, gameName, gameTags, gameDescription, scores}: Props) {
                 <p className="tags"><span>{gameTags}</span></p>
                 <p className="game-description">
                     {gameDescription}
-                    <span data-target="">Read More</span>
+                    <span data-target={id}>Read More</span>
                 </p>
                 <div className="wrapper">
                     <div className="steam-btn">

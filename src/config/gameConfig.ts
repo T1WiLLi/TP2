@@ -26,15 +26,22 @@ export const GAME_CONFIG: config = {
     "3": {
         image: "ac_odyssey.jpg",
         name: 'Assassin\'s Creed Odyssey',
-        tags: "Action-Adventure | PC, PS4, XBOX ONE",
+        tags: "Action-Adventure RPG | PC, PS4, XBOX ONE",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis rhoncus nibh. Phasellus dignissim luctus consectetur. Fusce viverra est non purus ultrices, vel molestie massa tincidunt.",
         scores: [8.4, 8.7, 92]
     },
     "4": {
         image: "ac_origin.jpg",
         name: 'Assassin\'s Creed Origins',
-        tags: "First-Person Shooter | PC, PS4, XBOX ONE",
+        tags: "Action RPG | PC, PS4, XBOX ONE",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis rhoncus nibh. Phasellus dignissim luctus consectetur. Fusce viverra est non purus ultrices, vel molestie massa tincidunt.",
         scores: [8.2, 7.5, 85]
+    },
+    "5": {
+        image: "ac_blackflag.webp",
+        name: 'Assassin\'s Creed Black Flag',
+        tags: "Action-Adventure | PC, PS4, XBOX ONE / 360",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis rhoncus nibh. Phasellus dignissim luctus consectetur. Fusce viverra est non purus ultrices, vel molestie massa tincidunt.",
+        scores: [10.0, 10.0, 100]
     }
 };

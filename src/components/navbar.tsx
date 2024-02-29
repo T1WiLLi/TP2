@@ -28,10 +28,10 @@ function Navbar() {
                             <a className="nav-link" target="_self" href="#">Home</a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link" target="_self" href="#education">Games</a>
+                        <a className="nav-link" target="_self" href="#games">Games</a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link" target="_self" href="#equip">Team</a>
+                        <a className="nav-link" target="_self" href="#">Team</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" target="_self" href="#">Careers</a>

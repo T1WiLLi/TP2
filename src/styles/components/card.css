@@ -3,6 +3,7 @@
     width: 100%;
     background: var(--card-background);
     box-shadow: var(--card-shadow);
+    height: 22rem;
 }
 
 .game-img {
@@ -50,7 +51,7 @@
 
 .game-description span {
     color: var(--primary-color); /* Use your primary color variable */
-
+    cursor: pointer;
 }
 
 .wrapper {
