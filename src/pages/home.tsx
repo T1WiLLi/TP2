@@ -4,6 +4,7 @@ import acMirage from "../assets/images/carousel/ac_mirage.webp";
 import acValhalla from "../assets/images/carousel/ac_valhalla.jpeg";
 import acOdyssey from "../assets/images/carousel/ac_odyssey.jpg";
 import acOrigin from "../assets/images/carousel/ac_origin.jpg";
+import GamePortfolio from "../components/gameportfolio";
 
 interface ImageMap {
     [gameNum: string]: string;
@@ -42,6 +43,7 @@ function Home() {
                     <h1>We Make <span>Awesome Games</span></h1>
                 </div>
             </section>
+            <GamePortfolio/>
         </>
     );
 }

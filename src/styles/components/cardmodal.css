@@ -1,0 +1,22 @@
+/* Customize modal styling as needed */
+.modal-body {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+.modal-section {
+    margin-bottom: 20px;
+}
+
+.modal-section h6 {
+    font-size: 1rem;
+}
+
+.modal-section hr {
+    border-top: 1px solid #ccc;
+}
+
+.modal-section img {
+    max-width: 100%;
+    height: auto;
+}

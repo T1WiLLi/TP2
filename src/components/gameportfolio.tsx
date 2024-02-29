@@ -1,11 +1,14 @@
 import Card from "./card";
 import { GAME_CONFIG } from "../config/gameConfig";
+import { GAME_MODAL_CONFIG } from '../config/gameModalConfig'; // Import game modal config
 import acMirage from "../assets/images/game-sel/ac-mirage.webp";
 import acValhalla from "../assets/images/game-sel/ac-valhalla.jpg";
 import acOdyssey from "../assets/images/game-sel/ac-odyssey.jpg";
 import acOrigin from "../assets/images/game-sel/ac-origin.jpg";
 import acBlackFlag from "../assets/images/game-sel/ac-black_flag.webp";
 import "../styles/components/gameportfolio.css";
+import { useState } from "react";
+import CardModal from "../components/cardmodal";
 
 interface ImageMap {
     [gameNum: string]: string;
@@ -19,6 +22,16 @@ function GamePortfolio() {
         "4": acOrigin,
         "5": acBlackFlag
     };
+
+    const [openModalId, setOpenModalId] = useState<string | null>(null);
+
+    const handleOpenModal = (gameId: string) => {
+        setOpenModalId(gameId);
+    };
+
+    const handleCloseModal = () => {
+        setOpenModalId(null);
+    }
 
     return (
         <section id="games" className="game-portfolio">
@@ -37,9 +50,23 @@ function GamePortfolio() {
                         gameTags={game.tags}
                         gameDescription={game.description}
                         scores={game.scores}
+                        onReadMoreClick={handleOpenModal}
                     />
                 ))}
             </div>
+        {openModalId && (
+                <CardModal
+                    isOpen={true}
+                    onClose={handleCloseModal}
+                    gameName={GAME_CONFIG[openModalId].name}
+                    gameData={{
+                        header1: GAME_MODAL_CONFIG[openModalId].header1,
+                        text1: GAME_MODAL_CONFIG[openModalId].text1,
+                        header2: GAME_MODAL_CONFIG[openModalId].header2,
+                        text2: GAME_MODAL_CONFIG[openModalId].text2
+                    }}
+                />
+            )}
         </section>
     );
 }

@@ -1,15 +1,23 @@
+import React from 'react';
 import "../styles/components/card.css";
 
-interface Props {
+interface CardProps {
     id: number;
     gameImage: string;
     gameName: string;
     gameTags: string;
     gameDescription: string;
     scores: [number, number, number];
+    onReadMoreClick?: (id: string) => void;
 }
 
-function Card({id, gameImage, gameName, gameTags, gameDescription, scores}: Props) {
+const Card: React.FC<CardProps> = ({ id, gameImage, gameName, gameTags, gameDescription, scores, onReadMoreClick }) => {
+    const handleReadMoreClick = () => {
+        if (onReadMoreClick) {
+            onReadMoreClick(id.toString());
+        }
+    };
+
     return (
         <div className="game-card">
             <div className="game-img">
@@ -20,7 +28,7 @@ function Card({id, gameImage, gameName, gameTags, gameDescription, scores}: Prop
                 <p className="tags"><span>{gameTags}</span></p>
                 <p className="game-description">
                     {gameDescription}
-                    <span data-target={id}>Read More</span>
+                    <span onClick={handleReadMoreClick} data-target={id}>Read More</span>
                 </p>
                 <div className="wrapper">
                     <div className="steam-btn">
@@ -57,6 +65,6 @@ function Card({id, gameImage, gameName, gameTags, gameDescription, scores}: Prop
             </div>
         </div>
     );
-}
+};
 
 export default Card;
