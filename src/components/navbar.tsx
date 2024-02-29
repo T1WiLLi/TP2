@@ -46,7 +46,7 @@ function Navbar() {
     );
 }
 
-export class ScrollHandler {
+class ScrollHandler {
     constructor() {
         window.addEventListener('scroll', () => {
             const navbar = qs('.navbar') as HTMLElement;
