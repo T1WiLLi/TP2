@@ -72,7 +72,8 @@
 }
 
 .steam-btn > a {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     min-height: 55px;
     min-width: 150px;
     height: auto;
@@ -99,6 +100,7 @@
 .fa-brands {
     font-size: 3em;
     color: var(--body-background);
+    margin-right: 0.5rem;
 }
 
 .reviews {
@@ -144,4 +146,40 @@
     color: var(--body-background);
     font-size: 14px;
     padding-top: 0;
+}
+
+@media screen and (max-width: 1190px) {
+    .game-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .game-img {
+        flex: 100%;
+    }
+
+    .game-header {
+        flex: 100%;
+        padding: 1rem;
+    }
+
+    .wrapper {
+        gap: 1rem;
+    }
+
+    .steam-btn > a {
+        min-width: 100px;
+        padding: 8px;
+    }
+
+    .reviews {
+        flex-direction: row; 
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .score-card {
+        min-height: 60px;
+        min-width: 80px;
+    }
 }
