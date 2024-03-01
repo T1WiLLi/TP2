@@ -62,6 +62,10 @@
     justify-content: space-between;
 }
 
+.box-shadow {
+    box-shadow: var(--card-shadow);
+}
+
 .steam-btn {
     display: inline-block;
     transition: all ease-in-out 0.1s;

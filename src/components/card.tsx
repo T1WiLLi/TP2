@@ -30,7 +30,7 @@ const Card: React.FC<CardProps> = ({ id, gameImage, gameName, gameTags, gameDesc
                     <span onClick={handleReadMoreClick} data-target={id}> Read More</span>
                 </p>
                 <div className="wrapper">
-                    <div className="steam-btn">
+                    <div className="steam-btn box-shadow">
                         <a href="#">
                             <i className="fa-brands fa-steam"></i>
                             <p>
@@ -42,19 +42,19 @@ const Card: React.FC<CardProps> = ({ id, gameImage, gameName, gameTags, gameDesc
                     </div>
                     <div className="reviews">
                         <a href="#">
-                            <div className="score-card">
+                            <div className="score-card box-shadow">
                                 <p className="score">{scores[0]}</p>
                                 <p>Gamespot</p>
                             </div>
                         </a>
                         <a href="#">
-                            <div className="score-card">
+                            <div className="score-card box-shadow">
                                 <p className="score">{scores[1]}</p>
                                 <p>IGN</p>
                             </div>
                         </a>
                         <a href="#">
-                            <div className="score-card">
+                            <div className="score-card box-shadow">
                                 <p className="score">{scores[2]}</p>
                                 <p>Metacritic</p>
                             </div>

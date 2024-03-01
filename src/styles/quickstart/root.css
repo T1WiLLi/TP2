@@ -62,6 +62,7 @@ body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     background-color: var(--body-background);
+    font-family: Inter, system-ui, Arial, Helvetica, Arial, sans-serif;
 }
 
 a:not([class]) {
