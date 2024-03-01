@@ -39,7 +39,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="header-quote">
+                <div className="header-quote" data-aos="zoom-in">
                     <h1>We Make <span>Awesome Games</span></h1>
                 </div>
             </section>

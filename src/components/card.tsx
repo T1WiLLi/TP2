@@ -1,7 +1,4 @@
-import { useEffect } from 'react';
-import AOS from 'aos';
 import "../styles/components/card.css";
-import 'aos/dist/aos.css';
 
 interface CardProps {
     id: number;
@@ -19,10 +16,6 @@ const Card: React.FC<CardProps> = ({ id, gameImage, gameName, gameTags, gameDesc
             onReadMoreClick(id.toString());
         }
     };
-
-    useEffect(() => {
-        AOS.init({once: true});
-    }, []);
 
     return (
         <div className="game-card" data-aos="fade-right" data-aos-duration="500" data-aos-delay={100 * id}>

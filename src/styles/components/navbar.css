@@ -1,14 +1,14 @@
 .navbar{
     position: fixed;
     width: 100%;
-    padding: 20px 0;
-    background-color: var(--body-navbar);
+    padding: 15px 0;
+    background-color: transparent;
     z-index: 5;
     transition: all ease 0.4s;
 }
 
 .navbar.sticky {
-    padding: 4px 0;
+    padding: 0;
     background: var(--primary-color);
 }
 
@@ -26,7 +26,7 @@
 }
 
 .navbar .navbar-brand{
-    color: var(--body-navbar-color);
+    color: #fff;
     font-size: 2.5em;
     font-weight: 700;
 }
@@ -50,7 +50,7 @@
 .navbar .navbar-nav li a {
     position: relative;
     display: inline-block;
-    color: var(--body-navbar-color);
+    color: #fff;
     font-size: 1.2em;
     font-weight: 500;
     padding: 4px!important;
