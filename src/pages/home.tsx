@@ -6,6 +6,7 @@ import acOdyssey from "../assets/images/carousel/ac_odyssey.jpg";
 import acOrigin from "../assets/images/carousel/ac_origin.jpg";
 import GamePortfolio from "../components/gameportfolio";
 import CookieConsent from "../utils/cookieconsent";
+import BigStat from "../components/bigstats";
 
 interface ImageMap {
     [gameNum: string]: string;
@@ -46,6 +47,7 @@ function Home() {
                 </div>
             </section>
             <GamePortfolio/>
+            <BigStat/>
         </>
     );
 }

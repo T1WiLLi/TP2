@@ -53,7 +53,8 @@ class ScrollHandler {
             const navLinks = qsAll('.nav-link') as NodeListOf<HTMLAnchorElement>;
             const spanLio = qs('#span_lio') as HTMLSpanElement;
             const toggler = qsAll('.toggler-icon') as NodeListOf<HTMLSpanElement>;
-            if (window.scrollY > 20) {
+            const lsHeight = qs('.carousel-inner')?.getBoundingClientRect().height as number;
+            if (window.scrollY > lsHeight - 75) {
                 if (navbar) navbar.classList.add('sticky');
                 navLinks.forEach(element => element.classList.add('scroll'));
                 if (spanLio) spanLio.classList.add('span-sticky');

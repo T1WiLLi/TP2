@@ -1,0 +1,66 @@
+/* Wrapper for the entire component */
+.wrapper-stat {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* Background for particles */
+.wrapper-stat #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #222;
+}
+
+/* Title */
+.wrapper-stat h2 {
+    font-size: clamp(2rem, 8vw, 4rem);
+    margin-bottom: 2rem;
+}
+
+/* Stats container */
+.stats {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px; /* Increased max-width for better card spacing */
+}
+
+/* Individual stat card */
+.stat {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 1rem;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: calc(33% - 2rem); /* Adjusted width for better card spacing */
+}
+
+.stat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Individual stat text */
+.stat h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Number styling */
+.stat span {
+    color: var(--primary-color);
+}
