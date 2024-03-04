@@ -5,6 +5,7 @@ import acValhalla from "../assets/images/carousel/ac_valhalla.jpeg";
 import acOdyssey from "../assets/images/carousel/ac_odyssey.jpg";
 import acOrigin from "../assets/images/carousel/ac_origin.jpg";
 import GamePortfolio from "../components/gameportfolio";
+import CookieConsent from "../utils/cookieconsent";
 
 interface ImageMap {
     [gameNum: string]: string;
@@ -19,6 +20,7 @@ function Home() {
     };
     return (
         <>
+            <CookieConsent/>
             <Navbar/>
             <section className="landing-section">
                 <div className="background-wrapper">
