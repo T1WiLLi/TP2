@@ -1,14 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { qs, qsAll } from "../helper/helper";
 import "../styles/components/navbar.css";
 import { DarkMode } from "../utils/darkmode";
 
 function Navbar() {
+
     useEffect(() => {
         new ScrollHandler();
     }, []);
-
-    const [isNavbarOpen, setIsNavbarOpen] = useState(false); // State to track whether navbar is open
 
     return (
         <nav className="navbar navbar-expand-lg" data-bs-theme="dark">
@@ -17,28 +16,28 @@ function Navbar() {
                     WeSoft<span id="span_lio">Qc</span>
                 </a>
                 <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={isNavbarOpen}
-                    aria-label="Toggle navigation" onClick={() => setIsNavbarOpen(!isNavbarOpen)}>
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span className="toggler-icon top-bar"></span>
                     <span className="toggler-icon middle-bar"></span>
                     <span className="toggler-icon bottom-bar"></span>
                 </button>
-                <div className={`collapse navbar-collapse ${isNavbarOpen ? 'show' : ''}`} id="navbarSupportedContent">
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto mb-1 mb-lg-0">
                         <li className="nav-item">
                             <a className="nav-link" target="_self" href="#">Home</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" target="_self" href="#games">Games</a>
+                        <a className="nav-link" target="_self" href="#games">Games</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" target="_self" href="#">Team</a>
+                        <a className="nav-link" target="_self" href="#">Team</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" target="_self" href="#">Careers</a>
                         </li>
                         <li className="nav-item">
-                            {isNavbarOpen && <DarkMode />}
+                            <a className="nav-link" target="_self" href="#">{<DarkMode/>}</a>
                         </li>
                     </ul>
                 </div>
@@ -46,7 +45,6 @@ function Navbar() {
         </nav>
     );
 }
-
 
 class ScrollHandler {
     constructor() {
