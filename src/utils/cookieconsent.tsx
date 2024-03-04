@@ -12,10 +12,8 @@ const CookieConsent: FC<CookieConsentProps> = ({ onConsent }) => {
         const consent = localStorage.getItem('cookieConsent');
         const lastClosedTime = localStorage.getItem('cookieConsentLastClosedTime');
 
-        // If no preference is stored or if it has been more than 5 minutes since last closure, show consent box
-        if (consent === null || (!lastClosedTime || (Date.now() - parseInt(lastClosedTime)) > 300000)) {
-            setShow(true);
-        }
+        const shouldShow = consent === null || !lastClosedTime || (Date.now() - parseInt(lastClosedTime)) > 300000;
+        setShow(shouldShow);
     }, []);
 
     const handleConsent = (consent: boolean) => {
