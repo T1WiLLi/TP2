@@ -11,17 +11,6 @@
     color: #fff;
 }
 
-/* Background for particles */
-.wrapper-stat #particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-color: #222;
-}
-
 /* Title */
 .wrapper-stat h2 {
     font-size: clamp(2rem, 8vw, 4rem);

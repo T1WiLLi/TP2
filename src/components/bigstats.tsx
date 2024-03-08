@@ -10,16 +10,16 @@ function BigStat() {
 
     return (
         <div className="wrapper-stat">
-            <h2 data-aos="fade-up" style={{ color: "var(--primary-color)" }}>WeSoftQc is:</h2>
+            <h2 data-aos="fade-up">We <span>Are</span></h2>
             <div className="stats">
                 <div className="stat" data-aos="fade-up" data-aos-delay="100">
-                    <h3 style={{ color: "var(--secondary-color)" }}><span>862k+</span> monthly players</h3>
+                    <h3><span>862k+</span> monthly players</h3>
                 </div>
                 <div className="stat" data-aos="fade-up" data-aos-delay="200">
-                    <h3 style={{ color: "var(--secondary-color)" }}><span>76+</span> Million in Gross revenues annually</h3>
+                    <h3><span>76+</span> Million in Gross revenues annually</h3>
                 </div>
                 <div className="stat" data-aos="fade-up" data-aos-delay="300">
-                    <h3 style={{ color: "var(--secondary-color)" }}><span>230+</span> Proud Developers</h3>
+                    <h3><span>230+</span> Proud Developers</h3>
                 </div>
             </div>
         </div>
