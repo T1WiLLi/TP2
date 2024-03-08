@@ -7,6 +7,7 @@ import acOrigin from "../assets/images/carousel/ac_origin.jpg";
 import GamePortfolio from "../components/gameportfolio";
 import CookieConsent from "../utils/cookieconsent";
 import BigStat from "../components/bigstats";
+import ParticleBackground from "../utils/particles";
 
 interface ImageMap {
     [gameNum: string]: string;
@@ -25,22 +26,7 @@ function Home() {
             <Navbar/>
             <section className="landing-section">
                 <div className="background-wrapper">
-                    <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
-                        <div className="carousel-inner">
-                            <div className="carousel-item active">
-                                <img src={imageMap[1]} className="d-block w-100" alt="..."/>
-                            </div>
-                            <div className="carousel-item">
-                                <img src={imageMap[2]} className="d-block w-100" alt="..."/>
-                            </div>
-                            <div className="carousel-item">
-                                <img src={imageMap[3]} className="d-block w-100" alt="..."/>
-                            </div>
-                            <div className="carousel-item">
-                                <img src={imageMap[4]} className="d-block w-100" alt="..."/>
-                            </div>
-                        </div>
-                    </div>
+                    <ParticleBackground />
                 </div>
                 <div className="header-quote" data-aos="zoom-in" data-aos-duration="1500">
                     <h1>We Make <span>Awesome Games</span></h1>

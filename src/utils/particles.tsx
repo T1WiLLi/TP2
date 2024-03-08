@@ -14,19 +14,19 @@ function ParticleBackground() {
                     }
                 },
                 color: {
-                    value: "#ffffff"
+                    value: "#E48632"
                 },
                 shape: {
                     type: "circle",
                     stroke: {
                         width: 0,
-                        color: "#ffffff"
+                        color: "#ff0000"
                     },
                     polygon: {
                         nb_sides: 5
                     },
                     image: {
-                        src: "img/github.svg",
+                        src: "",
                         width: 100,
                         height: 100
                     }
@@ -36,18 +36,18 @@ function ParticleBackground() {
                     random: false,
                     anim: {
                         enable: false,
-                        speed: 1,
-                        opacity_min: 0.1,
+                        speed: 2,
+                        opacity_min: 0.0,
                         sync: false
                     }
                 },
                 size: {
-                    value: 5,
-                    random: true,
+                    value: 3,
+                    random: false,
                     anim: {
                         enable: false,
-                        speed: 40,
-                        size_min: 0.1,
+                        speed: 20,
+                        size_min: 0.0,
                         sync: false
                     }
                 },
@@ -60,7 +60,7 @@ function ParticleBackground() {
                 },
                 move: {
                     enable: true,
-                    speed: 6,
+                    speed: 2,
                     direction: "none",
                     random: false,
                     straight: false,
@@ -68,35 +68,36 @@ function ParticleBackground() {
                     bounce: false,
                     attract: {
                         enable: false,
-                        rotateX: 600,
-                        rotateY: 1200
+                        rotateX: 3000,
+                        rotateY: 3000
                     }
-                }
+                },
+                array: []
             },
             interactivity: {
-                detect_on: "canvas",
+                detect_on: "window",
                 events: {
                     onhover: {
                         enable: true,
-                        mode: "repulse"
+                        mode: "grab"
                     },
                     onclick: {
-                        enable: true,
+                        enable: false,
                         mode: "push"
                     },
                     resize: true
                 },
                 modes: {
                     grab: {
-                        distance: 400,
+                        distance: 200,
                         line_linked: {
                             opacity: 1
                         }
                     },
                     bubble: {
-                        distance: 400,
-                        size: 40,
-                        duration: 2,
+                        distance: 200,
+                        size: 80,
+                        duration: 0.4,
                         opacity: 8,
                         speed: 3
                     },
@@ -110,7 +111,8 @@ function ParticleBackground() {
                     remove: {
                         particles_nb: 2
                     }
-                }
+                },
+                mouse: {}
             },
             retina_detect: false
         };

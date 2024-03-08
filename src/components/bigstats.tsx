@@ -1,4 +1,3 @@
-import ParticleBackground from "../utils/particles";
 import "../styles/components/bigstats.css";
 import { useEffect } from "react";
 import AOS from "aos";
@@ -11,7 +10,6 @@ function BigStat() {
 
     return (
         <div className="wrapper-stat">
-            <ParticleBackground />
             <h2 data-aos="fade-up" style={{ color: "var(--primary-color)" }}>WeSoftQc is:</h2>
             <div className="stats">
                 <div className="stat" data-aos="fade-up" data-aos-delay="100">
