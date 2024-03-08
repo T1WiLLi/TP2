@@ -192,4 +192,9 @@
     .steam-btn {
         display: none;
     }
+
+    .wrapper {
+        width: 100%;
+        justify-content: center;
+    }
 }
