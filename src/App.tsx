@@ -15,3 +15,12 @@ function App() {
 }
 
 export default App
+
+
+/*
+Things to do:
+
+Reformating of all TSX Components, 
+Reformating of all CSS class Components,
+Reformating of all CSS's Code for all Components
+*/
