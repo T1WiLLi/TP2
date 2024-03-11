@@ -61,7 +61,7 @@ html:focus-within {
 body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
-    background-color: var(--body-background);
+    background-color: var(--body-background)!important;
     font-family: Inter, system-ui, Arial, Helvetica, Arial, sans-serif;
 }
 
