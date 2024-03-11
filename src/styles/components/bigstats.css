@@ -10,11 +10,42 @@
     color: #fff;
 }
 
+.background-wrapper {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+    z-index: -1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.background-wrapper img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.5);
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.carousel-item {
+    height: 100vh; /* Set height to cover viewport */
+}
+
+.carousel-item img {
+    object-fit: cover; /* Ensure image fills its container */
+}
+
 .wrapper-stat h2 {
     color: #fff;
     font-weight: bolder;
     word-spacing: 0.20em;
-    font-size: clamp(2rem, 8vw, 4rem);
+    font-size: clamp(3rem, 8vw, 6rem);
     margin-bottom: 2rem;
 }
 

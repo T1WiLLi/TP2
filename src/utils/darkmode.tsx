@@ -37,13 +37,13 @@ export const DarkMode = () => {
     return (
         <div>
             <input 
-                className="darkmode-toggle"
+                className="darkmode__toggle"
                 type="checkbox" 
                 id="darkmode-toggle" 
                 onChange={toggleTheme} 
                 checked={currentTheme === 'dark'} 
             />
-            <label htmlFor="darkmode-toggle" className="toggle-label"></label>
+            <label htmlFor="darkmode-toggle" className="darkmode__toggle-label"></label>
         </div>
     );
 };
