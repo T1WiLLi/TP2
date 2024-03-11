@@ -10,11 +10,11 @@ function Home() {
         <>
             <CookieConsent/>
             <Navbar/>
-            <section className="landing-section">
-                <div className="background-wrapper">
+            <section className="landing-section position-relative d-flex flex-row justify-content-center">
+                <div className="background-wrapper position-absolute overflow-hidden">
                     <ParticleBackground />
                 </div>
-                <div className="header-quote" data-aos="zoom-in" data-aos-duration="1500">
+                <div className="header-quote d-flex justify-content-center align-items-center " data-aos="zoom-in" data-aos-duration="1500">
                     <h1>We Make <span>Awesome Games</span></h1>
                 </div>
             </section>
