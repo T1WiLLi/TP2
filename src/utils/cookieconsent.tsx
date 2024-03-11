@@ -6,9 +6,9 @@ const CookieConsent = () => {
     const [show, setShow] = useState<boolean>(false);
 
     useEffect(() => {
-        const consent = localStorage.getItem('cookieConsent');
-        const lastClosedTime = localStorage.getItem('cookieConsentLastClosedTime');
-        const lastClosedTimeMillis = lastClosedTime ? parseInt(lastClosedTime) : 0;
+        const consent = localStorage.getItem('cookieConsent') as string;
+        const lastClosedTime = localStorage.getItem('cookieConsentLastClosedTime') as string;
+        const lastClosedTimeMillis = lastClosedTime ? parseInt(lastClosedTime) : 0 as number;
         const shouldShow = consent === null || !lastClosedTime || (Date.now() - lastClosedTimeMillis) > 1000;
         setShow(shouldShow);
     }, []);
