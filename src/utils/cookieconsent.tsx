@@ -24,7 +24,7 @@ const CookieConsent = () => {
 
         setTimeout(() => {
             setShow(true);
-        }, 1000);
+        }, 300000); // After 5min
     };
 
     return (
