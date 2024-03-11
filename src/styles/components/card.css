@@ -65,25 +65,17 @@
 }
 
 .steam-btn > a {
-    display: flex;
-    align-items: center;
     min-height: 55px;
     min-width: 150px;
     background: var(--body-color);
     border-radius: 3px;
-    padding: 12px;
-    border: none;
     color: var(--body-background);
     cursor: pointer;
-    text-decoration: none!important;
     transition: 0.2s;
 }
 
 .steam-btn p {
-    float: right;
     line-height: 20px;
-    font-weight: bold;
-    margin: 0!important;
 }
 
 .steam-btn > a > p > span {
@@ -93,26 +85,13 @@
 .fa-brands {
     font-size: 3em;
     color: var(--body-background);
-    margin-right: 0.5rem;
-}
-
-.reviews {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
 }
 
 .score-card {
-    display: inline-block;
     min-height: 70px;
     min-width: 90px;
-    width: auto;
-    height: auto;
     background: var(--body-navbar-color);
     text-align: center;
-    margin: 0 5px 0 0;
-    padding: 5px;
     border-radius: 2px;
     transition: all ease-in-out 0.2s;
 }
@@ -123,9 +102,6 @@
 
 .score {
     font-size: 1.3rem;
-    font-weight: bold;
-    margin-top: 5px;
-    padding-bottom: 0;
     color: var(--body-background);
 }
 
