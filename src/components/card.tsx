@@ -18,18 +18,18 @@ const Card: React.FC<CardProps> = ({ id, gameImage, gameName, gameTags, gameDesc
     };
 
     return (
-        <div className="game-card" data-aos="fade-right" data-aos-duration="500" data-aos-delay={100 * id}>
-            <div className="game-img">
+        <div className="game-card d-flex" data-aos="fade-right" data-aos-duration="500" data-aos-delay={100 * id}>
+            <div className="game-img position-relative">
                 <img src={gameImage} alt=""/>
             </div>
             <div className="game-header">
-                <h2 className="header-header">{gameName}</h2>
+                <h2 className="header-header mt-0">{gameName}</h2>
                 <p className="tags"><span>{gameTags}</span></p>
                 <p className="game-description">
                     {gameDescription}
                     <span onClick={handleReadMoreClick} data-target={id}> Read More</span>
                 </p>
-                <div className="wrapper">
+                <div className="wrapper d-flex align-items-center justify-content-between mt-5">
                     <div className="steam-btn box-shadow">
                         <a href="#">
                             <i className="fa-brands fa-steam"></i>

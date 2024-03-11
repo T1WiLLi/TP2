@@ -14,7 +14,7 @@ function Home() {
                 <div className="background-wrapper position-absolute overflow-hidden">
                     <ParticleBackground />
                 </div>
-                <div className="header-quote d-flex justify-content-center align-items-center " data-aos="zoom-in" data-aos-duration="1500">
+                <div className="header-quote d-flex justify-content-center align-items-center text-center" data-aos="zoom-in" data-aos-duration="1500">
                     <h1>We Make <span>Awesome Games</span></h1>
                 </div>
             </section>

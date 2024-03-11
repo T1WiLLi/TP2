@@ -1,6 +1,5 @@
 .game-card {
     display: flex;
-    width: 100%;
     background: var(--card-background);
     box-shadow: var(--card-shadow);
     height: 20rem;
@@ -8,7 +7,6 @@
 }
 
 .game-img {
-    position: relative;
     flex: 40%;
 }
 
@@ -26,15 +24,14 @@
 .header-header {
     font-size: 2.25rem;
     color: var(--body-color);
-    margin-top: 0;
 }
 
 .header-header::after {
     content: "";
-    display: block;
+    display: inherit;
     width: 6rem;
     height: 2px;
-    background-color: var(--primary-color); /* Use your primary color variable */
+    background-color: var(--primary-color);
     margin-top: 5px;
 }
 
@@ -55,19 +52,11 @@
     cursor: pointer;
 }
 
-.wrapper {
-    margin-top: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .box-shadow {
     box-shadow: var(--card-shadow);
 }
 
 .steam-btn {
-    display: inline-block;
     transition: all ease-in-out 0.1s;
 }
 
@@ -80,14 +69,13 @@
     align-items: center;
     min-height: 55px;
     min-width: 150px;
-    height: auto;
-    width: auto;
     background: var(--body-color);
     border-radius: 3px;
-    padding: 8px;
+    padding: 12px;
     border: none;
     color: var(--body-background);
     cursor: pointer;
+    text-decoration: none!important;
     transition: 0.2s;
 }
 
@@ -95,6 +83,7 @@
     float: right;
     line-height: 20px;
     font-weight: bold;
+    margin: 0!important;
 }
 
 .steam-btn > a > p > span {
@@ -195,6 +184,6 @@
 
     .wrapper {
         width: 100%;
-        justify-content: center;
+        justify-content: center!important;
     }
 }
