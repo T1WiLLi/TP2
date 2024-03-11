@@ -1,100 +1,5 @@
-.modal-wrapper {
-    scroll-behavior: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 2rem 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    animation: fade-in 0.5s ease;
-    overflow: auto;
-
-}
-
-@keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-    z-index: 999;
-}
-
-.modal-dialog {
-    position: relative;
-    width: 80%;
-    height: fit-content;
-    max-width: 600px;
-    background-color: var(--body-background);
-    border-radius: 8px;
-    box-shadow: var(--card-shadow);
-    z-index: 1000;
-    animation: slide-down 0.5s ease forwards; 
-    animation-delay: 0ms;
-    transform: translateY(-100%); 
-    overflow: auto;
-}
-
-.modal-wrapper.close-animation {
-    animation: slide-up 0.5s ease forwards;
-}
-
-@keyframes slide-down {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(0); }
-}
-
-@keyframes slide-up {
-    from { transform: translateY(0); }
-    to { transform: translateY(-100%); display: none; }
-}
-
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-    border-bottom: 2.5px solid var(--primary-color);
-    padding-bottom: 16px; 
-    padding: 24px;
-}
-
-.modal-title {
-    margin: 0;
-    font-size: 1.5rem;
-    color: var(--body-color);
-}
-
-.btn-close {
-    border: none;
-    font-size: 24px;
-    color: var(--body-color)!important;
-}
-
-.modal-body {
-    padding: 24px;
-}
-
 .modal-section {
     margin-bottom: 36px;
-    color: var(--body-color);
-}
-
-.modal-section h6 {
-    margin-bottom: 1rem;
 }
 
 .modal-section h6::after {
@@ -106,14 +11,28 @@
     margin-top: 5px;
 }
 
-.modal-section p {
-    text-align: justify;
+.modal-content {
+    background-color: var(--body-background);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.modal-section:last-child {
-    margin-bottom: 0;
+.modal-dialog {
+    transition: transform 0.3s ease;
 }
 
+.modal.fade .modal-dialog {
+    transform: translateY(-50px);
+}
+
+.modal.show .modal-dialog {
+    transform: translateY(0);
+}
+
+.modal-backdrop {
+    background-color: rgba(0, 0, 0);
+}
 
 @media screen and (max-width: 400px) {
     .modal-dialog {
