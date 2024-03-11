@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import "../styles/components/cookieconsent.css";
 
@@ -8,8 +8,8 @@ const CookieConsent = () => {
     useEffect(() => {
         const consent = localStorage.getItem('cookieConsent');
         const lastClosedTime = localStorage.getItem('cookieConsentLastClosedTime');
-
-        const shouldShow = consent === null || !lastClosedTime || (Date.now() - parseInt(lastClosedTime)) > 300000;
+        const lastClosedTimeMillis = lastClosedTime ? parseInt(lastClosedTime) : 0;
+        const shouldShow = consent === null || !lastClosedTime || (Date.now() - lastClosedTimeMillis) > 1000;
         setShow(shouldShow);
     }, []);
 
@@ -21,6 +21,10 @@ const CookieConsent = () => {
     const handleClose = () => {
         setShow(false);
         localStorage.setItem('cookieConsentLastClosedTime', Date.now().toString());
+
+        setTimeout(() => {
+            setShow(true);
+        }, 1000);
     };
 
     return (
