@@ -3,7 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import { StockFetcher } from "./lib/stockData";
+// import { StockFetcher } from "./lib/stockData";
 import Home from "./pages/home"
 
 function App() {
