@@ -3,6 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { StockFetcher } from "./lib/stockData";
 import Home from "./pages/home"
 
 function App() {
@@ -18,6 +19,16 @@ function App() {
 
 export default App
 
+/*
+API KEY =  ZTC3LVLRSA9SOS4J
+
+        const apiKey = 'ZTC3LVLRSA9SOS4J';
+        const stockFetcher = new StockFetcher(apiKey);
+
+        stockFetcher.fetchStockData('UBSFY')
+            .then(prices => console.log(prices))
+            .catch(error => console.error(error));
+*/
 
 /*
 Things to do:

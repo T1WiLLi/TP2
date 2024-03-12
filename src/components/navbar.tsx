@@ -34,6 +34,9 @@ function Navbar() {
                         <a className="nav-link" target="_self" href="#">Team</a>
                         </li>
                         <li className="nav-item">
+                            <a className="nav-link" target="_self" href="#">Investors</a>
+                        </li>
+                        <li className="nav-item">
                             <a className="nav-link" target="_self" href="#">Careers</a>
                         </li>
                         <li className="nav-item">
