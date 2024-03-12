@@ -33,7 +33,8 @@
 
 .bigstat__wrapper-stat h2 {
     color: #fff;
-    font-weight: bolder;
+    font-family: var(--title-font);
+    font-weight: 200;
     word-spacing: 0.20em;
     font-size: clamp(3rem, 8vw, 6rem);
 }
@@ -81,4 +82,9 @@
     height: 5px;
     background: var(--primary-color);
     margin-left: auto;
+}
+
+.bigstat__stat h3:last-child {
+    font-family: var(--title-font);
+    font-weight: 300;
 }

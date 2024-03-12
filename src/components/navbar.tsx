@@ -23,7 +23,7 @@ function Navbar() {
                     <span className="toggler-icon bottom-bar"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav ms-auto mb-1 mb-lg-0">
+                    <ul className="navbar-nav ms-auto mb-1 mb-lg-0 align-content-center">
                         <li className="nav-item">
                             <a className="nav-link" target="_self" href="#">Home</a>
                         </li>

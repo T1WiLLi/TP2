@@ -1,3 +1,9 @@
+.modal-title {
+    font-family: var(--title-font);
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
 .modal-section {
     margin-bottom: 36px;
 }

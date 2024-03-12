@@ -5,6 +5,7 @@
     background-color: transparent;
     z-index: 5;
     transition: all ease 0.4s;
+    font-family: var(--title-font);
 }
 
 .navbar.sticky {
@@ -45,6 +46,7 @@
 
 .navbar .navbar-nav li {
     list-style: none;
+    height: min-content;
 }
 
 .navbar .navbar-nav li a {

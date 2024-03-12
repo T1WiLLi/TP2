@@ -1,4 +1,6 @@
 import { Modal, Button } from "react-bootstrap";
+import "../styles/components/cardmodal.css"
+
 interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
@@ -15,7 +17,7 @@ const CardModal: React.FC<ModalProps> = ({ isOpen, onClose, gameName, gameData }
     return (
         <Modal show={isOpen} onHide={onClose} dialogClassName="modal-dialog-centered">
             <Modal.Header closeButton>
-                <Modal.Title>{gameName}</Modal.Title>
+                <Modal.Title className="modal-title">{gameName}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <div className="modal-section">

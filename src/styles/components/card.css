@@ -24,6 +24,8 @@
 .header-header {
     font-size: 2.25rem;
     color: var(--body-color);
+    font-family: var(--title-font);
+    font-weight: 300;
 }
 
 .header-header::after {
@@ -50,6 +52,8 @@
 .game-description span {
     color: var(--primary-color); /* Use your primary color variable */
     cursor: pointer;
+    font-family: var(--title-font);
+    font-weight: bolder;
 }
 
 .box-shadow {
