@@ -53,7 +53,7 @@ function Investor() {
                 {loading ? (
                     <p>Loading...</p>
                 ) : (
-                    <Row className="investor__info-row mb-0">
+                    <Row className="investor__info-row mb-0 mt-5">
                         <Col md={9}>
                             <div className="investor__info d-flex justify-content-between">
                                 {renderStockInfo()}
