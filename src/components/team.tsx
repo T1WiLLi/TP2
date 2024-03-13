@@ -49,10 +49,10 @@ const images: string[] = [img1, img2, img3, img4, img5, img6];
 
 function Team() {
     return(
-        <div id="team" className="team__content_wrapper">
+        <div id="team" className="team__content-wrapper">
             <Container>
                 <div className="team__header d-flex align-items-center gap-5">
-                    <h1 className="mb-0 fw-light">The <span>Team</span></h1>
+                    <h1 className="mb-0 fw-light" data-aos="fade-down" data-aos-duration="1500">The <span>Team</span></h1>
                     <HorizontalRule/>
                 </div>
                 <p className="team__desc mt-2 text-wrap text-start">

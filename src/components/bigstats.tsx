@@ -30,9 +30,9 @@ function BigStat() {
     };
 
     const stats:Statistic[] = [
-        { count: "862k+", label: "Monthly players" },
-        { count: "$76+", label: "Million in revenues" },
-        { count: "230+", label: "Proud Developers" }
+        { count: "87.5k+", label: "Monthly players" },
+        { count: "$3+", label: "Million in revenues" },
+        { count: "97+", label: "Proud Developers" }
     ]
 
     return (
