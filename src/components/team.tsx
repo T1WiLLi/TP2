@@ -5,6 +5,12 @@ import team1 from "../../public/images/team1.jpg";
 import team2 from "../../public/images/team2.jpg";
 import team3 from "../../public/images/team3.jpg";
 import team4 from "../../public/images/team4.jpg";
+import img1 from "../../public/images/img1.jpg";
+import img2 from "../../public/images/img2.jpg";
+import img3 from "../../public/images/img3.jpg";
+import img4 from "../../public/images/img4.jpg";
+import img5 from "../../public/images/img5.jpg";
+import img6 from "../../public/images/img6.jpg";
 
 interface ImageCardProps {
     name: string;
@@ -39,6 +45,8 @@ const team: ImageMap = {
     }
 }
 
+const images: string[] = [img1, img2, img3, img4, img5, img6];
+
 function Team() {
     return(
         <div id="team" className="team__content_wrapper">
@@ -50,10 +58,24 @@ function Team() {
                 <p className="team__desc mt-2 text-wrap text-start">
                     As a game studio, our passion drives us to create immersive worlds, captivating gameplay, and memorable experiences for players worldwide. With a team of talented developers, designers, and storytellers, we push the boundaries of gaming innovation, bringing dreams to life one pixel at a time.
                 </p>
-                <Row className="g-5 d-flex flex-row">
+                <Row className="g-5 d-flex flex-row mb-5">
                     {Object.entries(team).map(([name, member]) => (
                         <Col key={name} xs={12} sm={6} md={4} lg={3}>
                             <ImageCard name={name} member={member} />
+                        </Col>
+                    ))}
+                </Row>
+                <h1 className="team__studio-header d-block">
+                    Our Studio
+                </h1>
+                <p className="team__desc mt-2 text-wrap text-start">
+                    At Our Studio, creativity is our cornerstone. We blend passion and innovation to craft immersive gaming experiences that captivate players worldwide.
+                </p>
+                <Row className="team__studio-images g-2 mb-5">
+                    {images.map((image, index) => (
+                        <Col className="team__wrapper-image position-relative" key={index} xs={6} md={4}>
+                            <img src={image} className="img-fluid" alt={`Image ${index}`}/>
+                            <i className="fa-regular fa-image position-absolute"></i>
                         </Col>
                     ))}
                 </Row>
