@@ -88,3 +88,33 @@
     font-family: var(--title-font);
     font-weight: 300;
 }
+
+@media (max-width: 768px) {
+    .bigstat__stat {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 576px) {
+    .bigstat__stat {
+        width: calc(100% - 1rem);
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .bigstat__stat-content {
+        justify-content: center;
+    }
+
+    .bigstat__stat-content h3 {
+        font-size: 1rem!important;
+    }
+
+    .bigstat__stat-content h3:last-child {
+        margin: 0;
+    }
+
+    .bigstat__stat {
+        width: calc(100% - 5rem);
+    }
+}
