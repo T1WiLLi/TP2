@@ -4,8 +4,17 @@ import { StockFetcher } from "../lib/stockData";
 import "../styles/components/investor.css";
 import bg from "/images/investor_background.jpg";
 
+interface Stock {
+    stockPrice:string;
+    priceChange:string;
+    dailyHigh:string;
+    dailyLow:string;
+    dailyVolume:string;
+    lastTradingTime:string;
+}
+
 function Investor() {
-    const [stockData, setStockData] = useState<any>(null);
+    const [stockData, setStockData] = useState<Stock | null>(null);
     const [loading, setLoading] = useState(true);
     const apiKey = 'ZTC3LVLRSA9SOS4J';
     const stockSymbol = 'UBSFY'; 
@@ -29,10 +38,10 @@ function Investor() {
     const renderStockInfo = () => {
         console.log(stockData);
         const stockInfo = [
-            { label: 'Stock Price', value: `$4.24`, change: `+0.036` },
-            { label: 'Daily High', value: `$4.25` },
-            { label: 'Daily Low', value: `$4.20` },
-            { label: 'Daily Volume', value: `37 250` }
+            { label: 'Stock Price', value: `$${stockData?.stockPrice}`, change: `${stockData?.priceChange}` },
+            { label: 'Daily High', value: `$${stockData?.dailyHigh}` },
+            { label: 'Daily Low', value: `$${stockData?.dailyLow}` },
+            { label: 'Daily Volume', value: `${stockData?.dailyVolume}` }
         ];
 
         return stockInfo.map((info, index) => (
@@ -65,7 +74,7 @@ function Investor() {
                     </Row>
                 )}
                 <div className="investor__info-date mt-2 mb-0">
-                    <p>Mar 12, 2024 4:00 PM EDT</p>
+                    <p>{stockData && stockData.lastTradingTime}</p>
                     <p>Data Provided by AlphaVantage. Minimum 20 minutes delayed.</p>
                 </div>
             </Container>

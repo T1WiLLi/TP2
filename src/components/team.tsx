@@ -65,7 +65,7 @@ function Team() {
                         </Col>
                     ))}
                 </Row>
-                <h1 className="team__studio-header d-block">
+                <h1 data-aos="fade-down" data-aos-duration="1500" className="team__studio-header d-block">
                     Our Studio
                 </h1>
                 <p className="team__desc mt-2 text-wrap text-start">
