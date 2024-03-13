@@ -1,16 +1,16 @@
 import { Col, Container, Row } from "react-bootstrap";
 import "../styles/components/team.css";
 import HorizontalRule from "../utils/horizontalrule";
-import team1 from "../../public/images/team1.jpg";
-import team2 from "../../public/images/team2.jpg";
-import team3 from "../../public/images/team3.jpg";
-import team4 from "../../public/images/team4.jpg";
-import img1 from "../../public/images/img1.jpg";
-import img2 from "../../public/images/img2.jpg";
-import img3 from "../../public/images/img3.jpg";
-import img4 from "../../public/images/img4.jpg";
-import img5 from "../../public/images/img5.jpg";
-import img6 from "../../public/images/img6.jpg";
+import team1 from "/images/team1.jpg";
+import team2 from "/images/team2.jpg";
+import team3 from "/images/team3.jpg";
+import team4 from "/images/team4.jpg";
+import img1 from "/images/img1.jpg";
+import img2 from "/images/img2.jpg";
+import img3 from "/images/img3.jpg";
+import img4 from "/images/img4.jpg";
+import img5 from "/images/img5.jpg";
+import img6 from "/images/img6.jpg";
 
 interface ImageCardProps {
     name: string;
