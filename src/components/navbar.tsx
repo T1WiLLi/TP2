@@ -57,7 +57,6 @@ class ScrollHandler {
             const spanLio = qs('#span_lio') as HTMLSpanElement;
             const toggler = qsAll('.toggler-icon') as NodeListOf<HTMLSpanElement>;
             const lsHeight = qs('.landing-section')?.getBoundingClientRect().height as number;
-            console.log(lsHeight);
             if (window.scrollY > lsHeight - 100) {
                 if (navbar) navbar.classList.add('sticky');
                 navLinks.forEach(element => element.classList.add('scroll'));
