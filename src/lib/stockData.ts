@@ -8,7 +8,7 @@ export class StockFetcher {
         this.apiUrl = 'https://www.alphavantage.co/query';
     }
 
-    async fetchStockData(symbol: string): Promise<any> {
+    async fetchStockData(symbol: string): Promise<number> {
         const url = `${this.apiUrl}?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${this.apiKey}`;
         try {
             const response = await fetch(url);
@@ -17,28 +17,21 @@ export class StockFetcher {
             } 
 
             const data = await response.json();
-            return this.extractLast30DaysPrices(data);
+            return this.extractLastPrice(data);
         } catch (error: any) {
             console.error("Error fetching stock data: ", error.message);
+            throw error;
         }
     }
-    private extractLast30DaysPrices(data: any): number[] {
-        const last30DaysPrices: number[] = [];
+
+    private extractLastPrice(data: any): number {
         const timeSeries = data['Time Series (Daily)'];
 
         if(!timeSeries) {
             throw new Error("Time series data not available");
         }
 
-        let count:number = 0;
-        for(const data in timeSeries) {
-            if (count >= 30) {
-                break;
-            }
-
-            last30DaysPrices.push(parseFloat(timeSeries[data]['4. close']));
-            count++;
-        }
-        return last30DaysPrices;
+        const latestDate = Object.keys(timeSeries)[0]; // Get the latest date
+        return parseFloat(timeSeries[latestDate]['4. close']);
     }
 }
