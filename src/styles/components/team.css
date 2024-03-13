@@ -1,0 +1,75 @@
+.team__content_wrapper {
+    height: 1300px;
+    margin-top: 4rem;
+}
+
+.team__header h1 {
+    color: var(--body-color);
+    font-family: var(--title-font);
+    font-size: 4em;
+}
+
+.team__header h1 span {
+    color: var(--primary-color);
+}
+
+.team__desc {
+    color: var(--body-color);
+    font-size: 1.25em;
+}
+
+.team__card {
+    box-shadow: var(--card-shadow);
+    background: var(--card-background);
+    color: var(--body-color);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.team__card:hover .team__hover-content {
+    opacity: 1;
+}
+
+.team__card:hover figure img {
+    filter: grayscale(100%) blur(2px);
+}
+
+.team__card figure img {
+    transition: all 0.3s ease;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.team__hover-content {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+}
+
+.team__quote {
+    font-size: 1em;
+}
+
+.team__quote-divider {
+    width: 120px;
+    border-top: 2px solid var(--primary-color);
+}
+
+.team__social-links {
+    gap: 1rem;
+}
+
+.team__social-links i {
+    color: #fff;
+    font-size: 1.25em;
+    transition: color ease-in-out 0.2s;
+}
+
+.team__social-links i:hover {
+    color: var(--primary-color);
+}

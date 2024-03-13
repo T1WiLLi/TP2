@@ -31,7 +31,7 @@ function Navbar() {
                         <a className="nav-link" target="_self" href="#games">Games</a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link" target="_self" href="#">Team</a>
+                        <a className="nav-link" target="_self" href="#team">Team</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" target="_self" href="#">Investors</a>

@@ -42,7 +42,6 @@
 .desc {
   font-size: 1.25em;
   color: var(--body-color);
-  text-align: justify;
 }
 
 @media screen and (max-width: 1100px) {

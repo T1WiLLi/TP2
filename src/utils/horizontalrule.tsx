@@ -32,7 +32,7 @@ const HorizontalRule: React.FC = () => {
   }, []);
 
   return (
-    <div className={`hr ${hrVisible ? "grow-from-left show" : "grow-from-left"}`} ref={hrRef}></div>
+    <div style={{margin: "0"}} className={`hr ${hrVisible ? "grow-from-left show" : "grow-from-left"}`} ref={hrRef}></div>
   );
 };
 

@@ -4,6 +4,7 @@ import GamePortfolio from "../components/gameportfolio";
 import CookieConsent from "../utils/cookieconsent";
 import BigStat from "../components/bigstats";
 import ParticleBackground from "../utils/particles";
+import Team from "../components/team";
 
 function Home() {
     return (
@@ -20,6 +21,7 @@ function Home() {
             </section>
             <GamePortfolio/>
             <BigStat/>
+            <Team/>
         </>
     );
 }

@@ -44,7 +44,7 @@ const GamePortfolio: React.FC = () => {
           </h1>
           <HorizontalRule/>
         </div>
-        <p className="desc">
+        <p className="desc text-start">
           At WeSoftQc, we're passionate gamers crafting experiences for fellow enthusiasts. We believe in the magic of gaming to entertain and unite. With each game we create, we strive to immerse players in captivating worlds, sparking joy and excitement with every adventure.
         </p>
         <Row className="g-5 d-flex flex-column">
