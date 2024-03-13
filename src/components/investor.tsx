@@ -34,7 +34,7 @@ function Investor() {
     const [loading, setLoading] = useState(true);
     const apiKey = 'ZTC3LVLRSA9SOS4J';
     const stockSymbol = 'UBSFY'; 
-    const fetchStockDataEnabled = false; // Set to true to fetch data from the API! 
+    const fetchStockDataEnabled = true; // Set to true to fetch data from the API! 
     const newsImages: string[] = [new1, new2, new3];
 
     useEffect(() => {
@@ -42,7 +42,7 @@ function Investor() {
             const stockFetcher = new StockFetcher(apiKey);
 
             if (!stockData) {
-                stockFetcher.fetchStockData(stockSymbol)
+                stockFetcher.fetchRealTimeStockData(stockSymbol)
                     .then(data => {
                         setStockData(data);
                         setLoading(false);
@@ -94,7 +94,7 @@ function Investor() {
                     </Row>
                 )}
                 <div className="investor__info-date mt-2 mb-0">
-                    <p>{stockData && renderLastTradingTime(stockData.lastTradingTime)}</p>
+                    <p>{stockData && stockData.lastTradingTime + ' ' + renderLastTradingTime(stockData.lastTradingTime)}</p>
                     <p>Data Provided by AlphaVantage. Minimum 20 minutes delayed.</p>
                 </div>
                 <h1 className="investor__newsroom-header mt-5 mb-4">Newsroom</h1>

@@ -7,22 +7,22 @@ export class StockFetcher {
         this.apiUrl = 'https://www.alphavantage.co/query';
     }
 
-    async fetchStockData(symbol: string): Promise<any> {
-        const url = `${this.apiUrl}?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${this.apiKey}`;
+    async fetchRealTimeStockData(symbol: string, interval: string = '5min'): Promise<any> {
+        const url = `${this.apiUrl}?function=TIME_SERIES_INTRADAY&symbol=${symbol}&interval=${interval}&apikey=${this.apiKey}`;
         try {
             const response = await fetch(url);
             if (!response.ok) {
-                throw new Error(`Failed to fetch stock data: ${response.statusText}`);
+                throw new Error(`Failed to fetch real-time stock data: ${response.statusText}`);
             }
-
+    
             const data = await response.json();
             if (data['Error Message']) {
-                throw new Error(`Failed to fetch stock data: ${data['Error Message']}`);
+                throw new Error(`Failed to fetch real-time stock data: ${data['Error Message']}`);
             }
-
+    
             return this.formatStockData(data);
         } catch (error: any) {
-            console.error("Error fetching stock data: ", error.message);
+            console.error("Error fetching real-time stock data: ", error.message);
             return { error: true, message: error.message };
         }
     }
