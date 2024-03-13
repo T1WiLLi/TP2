@@ -3,6 +3,11 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { StockFetcher } from "../lib/stockData";
 import "../styles/components/investor.css";
 import bg from "/images/investor_background.jpg";
+import { news } from "../config/newsinvestorconfig";
+import new1 from "../assets/images/news/new1.jpg";
+import new2 from "../assets/images/news/new2.jpg";
+import new3 from "../assets/images/news/new3.jpg";
+
 
 interface Stock {
     stockPrice:string;
@@ -13,27 +18,42 @@ interface Stock {
     lastTradingTime:string;
 }
 
+const renderLastTradingTime = (lastTradingTime: string) => {
+    const date = new Date(lastTradingTime);
+    const options: Intl.DateTimeFormatOptions = {
+        hour: 'numeric',
+        minute: 'numeric',
+        timeZoneName: 'short'
+    };
+    const formattedTime = date.toLocaleString('en-US', options);
+    return formattedTime;
+};
+
 function Investor() {
     const [stockData, setStockData] = useState<Stock | null>(null);
     const [loading, setLoading] = useState(true);
     const apiKey = 'ZTC3LVLRSA9SOS4J';
     const stockSymbol = 'UBSFY'; 
+    const fetchStockDataEnabled = false; // Set to true to fetch data from the API! 
+    const newsImages: string[] = [new1, new2, new3];
 
     useEffect(() => {
-        const stockFetcher = new StockFetcher(apiKey);
+        if (fetchStockDataEnabled) {
+            const stockFetcher = new StockFetcher(apiKey);
 
-        if (!stockData) {
-            stockFetcher.fetchStockData(stockSymbol)
-                .then(data => {
-                    setStockData(data);
-                    setLoading(false);
-                })
-                .catch(error => {
-                    console.error(error);
-                    setLoading(false);
-                });
+            if (!stockData) {
+                stockFetcher.fetchStockData(stockSymbol)
+                    .then(data => {
+                        setStockData(data);
+                        setLoading(false);
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        setLoading(false);
+                    });
+            }
         }
-    }, []);
+    }, [fetchStockDataEnabled]);
 
     const renderStockInfo = () => {
         console.log(stockData);
@@ -58,7 +78,7 @@ function Investor() {
                 <img src={bg} alt="" />
                 <h1 className="position-absolute fw-bolder">Investors Center</h1>
             </div>
-            <Container>
+            <Container className="mb-5">
                 {loading ? (
                     <p>Loading...</p>
                 ) : (
@@ -74,22 +94,25 @@ function Investor() {
                     </Row>
                 )}
                 <div className="investor__info-date mt-2 mb-0">
-                    <p>{stockData && stockData.lastTradingTime}</p>
+                    <p>{stockData && renderLastTradingTime(stockData.lastTradingTime)}</p>
                     <p>Data Provided by AlphaVantage. Minimum 20 minutes delayed.</p>
                 </div>
+                <h1 className="investor__newsroom-header mt-5 mb-4">Newsroom</h1>
+                <Row className="g-4">
+                    {news.map((newsItem, index) => (
+                        <Col className="g-4" key={index} md={6}>
+                            <div className="news-card overflow-hidden">
+                                <img className="img-fluid mb-4" src={newsImages[index]} alt="image"/>
+                                <h3 className="px-4 mb-1 fw-bold">{newsItem.title}</h3>
+                                <p className="date px-4 mb-1">{newsItem.date.toLocaleDateString()}</p>
+                                <p className="px-4 mb-3 fw-normal">{newsItem.desc}</p>
+                            </div>
+                        </Col>
+                    ))}
+                </Row>
             </Container>
         </div>
     );
 }
 
 export default Investor;
-
-
-/*
-            { label: 'Stock Price', value: `$${stockData.stockPrice}`, change: stockData.priceChange },
-            { label: 'Daily High', value: `$${stockData.dailyHigh}` },
-            { label: 'Daily Low', value: `$${stockData.dailyLow}` },
-            { label: 'Daily Volume', value: `${stockData.dailyVolume}` }
-
-            {stockData && stockData.lastTradingTime}
-*/
