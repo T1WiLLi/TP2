@@ -37,7 +37,7 @@ function Navbar() {
                             <a className="nav-link" target="_self" href="#investor">Investors</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" target="_self" href="#">Careers</a>
+                            <a className="nav-link" target="_self" href="#careers">Careers</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" target="_self" href="#">{<DarkMode/>}</a>

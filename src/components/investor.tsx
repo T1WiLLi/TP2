@@ -34,7 +34,7 @@ function Investor() {
     const [loading, setLoading] = useState(true);
     const apiKey = 'ZTC3LVLRSA9SOS4J';
     const stockSymbol = 'UBSFY'; 
-    const fetchStockDataEnabled = true; // Set to true to fetch data from the API! 
+    const fetchStockDataEnabled = false; // Set to true to fetch data from the API! 
     const newsImages: string[] = [new1, new2, new3];
 
     useEffect(() => {
@@ -73,7 +73,7 @@ function Investor() {
     };
 
     return (
-        <div id="investor" className="investor__content-wrapper mt-5">
+        <div id="investor" className="investor__content-wrapper mt-5 py-5">
             <div className="investor__header position-relative">
                 <img src={bg} alt="" />
                 <h1 className="position-absolute fw-bolder">Investors Center</h1>
