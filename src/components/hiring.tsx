@@ -75,7 +75,7 @@ function JobModal({ showModal, handleCloseModal }: { showModal: number | null; h
     }, [showModal]);
 
     return (
-        <Modal show={showModal !== null} onHide={handleCloseModal} centered>
+        <Modal className="modal-lg" show={showModal !== null} onHide={handleCloseModal} centered>
             <Modal.Header closeButton className="hiring__modal-header">
                 <Modal.Title className="fw-light">{jobModalContent?.title}</Modal.Title>
             </Modal.Header>
