@@ -8,7 +8,7 @@ export class StockFetcher {
     }
 
     async fetchRealTimeStockData(symbol: string, interval: string = '5min'): Promise<any> {
-        const url = `${this.apiUrl}?function=TIME_SERIES_INTRADAY&symbol=${symbol}&interval=${interval}&apikey=${this.apiKey}`;
+        const url = `${this.apiUrl}?function=GLOBAL_QUOTE&symbol=${symbol}&interval=${interval}&apikey=${this.apiKey}`;
         try {
             const response = await fetch(url);
             if (!response.ok) {
