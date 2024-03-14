@@ -109,3 +109,57 @@
     background-color: #e39149;
     border-color: #e39149;
 }
+
+.hiring__newsletter {
+    padding: 20px;
+    width: 80%;
+}
+
+.hiring__newsletter h1 {
+    font-size: 2em;
+    font-family: var(--title-font);
+    color: var(--body-color);
+}
+
+.hiring__newsletter h1::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-top: 0.5rem;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    width: 10%;
+    height: 2px;
+}
+
+.hiring__newsletter p {
+    color: var(--body-color);
+}
+
+.hiring__newsletter-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 2px solid #fff;
+    padding: 10px;
+    outline: none;
+}
+
+.hiring__newsletter-input:focus, .hiring__newsletter-input:active {
+    border: 2px solid #fff!important;
+    outline: none!important;
+    box-shadow: none!important;
+}
+
+.hiring__newsletter-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: 2px solid var(--primary-color);
+    background: var(--primary-color);
+    padding: 10px 20px;
+}
+
+.hiring__newsletter-button:hover {
+    background-color: #e39149;
+    border-color: #e39149;
+}

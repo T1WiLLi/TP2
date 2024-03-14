@@ -1,4 +1,4 @@
-import { Button, Col, Container, Modal, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, Modal, Row } from "react-bootstrap";
 import "../styles/components/hiring.css";
 import HorizontalRule from "../utils/horizontalrule";
 import { JOB_CONFIG, JOB_MODAL_CONFIG } from "../config/jobConfig";
@@ -33,6 +33,24 @@ function Hiring() {
                             <JobCard title={job.title} description={job.description} index={job.index} setShowModal={setShowModal}/>
                         </Col>
                     ))}
+                </Row>
+                <Row className="justify-content-center mt-5 mb-5">
+                    <Col className="justify-content-center d-flex" md={8}>
+                        <div className="hiring__newsletter justify-content-center d-flex flex-column">
+                            <h1 className="fw-light mb-4 text-center position-relative">Our Newsletter</h1>
+                            <p className="text-center">Stay up to date with the team and our products by subscribing to our newsletter.</p>
+                            <Form>
+                                <Row className="g-0 align-items-center">
+                                    <Col>
+                                        <Form.Control className="hiring__newsletter-input" type="email" placeholder="Enter your email" />
+                                    </Col>
+                                    <Col xs="auto">
+                                        <Button className="hiring__newsletter-button" variant="primary" type="submit">Subscribe</Button>
+                                    </Col>
+                                </Row>
+                            </Form>
+                        </div>
+                    </Col>
                 </Row>
             </Container>
             <JobModal showModal={showModal} handleCloseModal={handleCloseModal}/>
