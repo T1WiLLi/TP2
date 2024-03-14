@@ -39,6 +39,8 @@
     border-left: 2px solid var(--primary-color);
     background: var(--card-background);
     box-shadow: var(--card-shadow);
+    min-height: 195px;
+    height: 100%;
 }
 
 .job-card h2 {
@@ -100,12 +102,17 @@
     color: var(--body-color);
 }
 
+.hiring__modal-howToApply-desc span {
+    color: var(--primary-color);
+}
+
 .hiring__modal-footer button:last-child {
     background: var(--primary-color);
     border-color: var(--primary-color);
 }
 
 .hiring__modal-footer button:last-child:hover {
+    text-decoration: underline;
     background-color: #e39149;
     border-color: #e39149;
 }
@@ -141,6 +148,7 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border: 2px solid #fff;
+    box-shadow: var(--card-shadow);
     padding: 10px;
     outline: none;
 }
@@ -155,6 +163,7 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border: 2px solid var(--primary-color);
+    box-shadow: var(--card-shadow);
     background: var(--primary-color);
     padding: 10px 20px;
 }
@@ -162,4 +171,16 @@
 .hiring__newsletter-button:hover {
     background-color: #e39149;
     border-color: #e39149;
+}
+
+@media screen and (max-width: 1400px) {
+    .job-card {
+        padding: 12px 12px!important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .job-card h2 {
+        font-size: 1.5em;
+    }
 }

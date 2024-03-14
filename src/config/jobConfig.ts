@@ -6,8 +6,8 @@ interface Config {
 
 export const JOB_CONFIG: Config[] = [
     {
-        title: "Lead Programmer",
-        description: "Lead and manage a team of developers to deliver high-quality software solutions.",
+        title: "Java & C Programmer",
+        description: "Use Spring framework along with C/C++ to deliver high-quality software solutions.",
         index: 0
     },
     {
@@ -32,12 +32,15 @@ interface ModalContent {
 
 export const JOB_MODAL_CONFIG: ModalContent[] = [
     {
-        title: "Lead Programmer",
-        idealCandidate: "Are you an experienced programmer with leadership skills? We're looking for someone who can lead and manage a team of developers to deliver high-quality software solutions.",
-        requireSkills: ["C++", "Java", "Python", "Leadership", "Problem-solving"],
+        title: "Java & C Programmer",
+        idealCandidate: "Are you an experienced Java programmer with expertise in Spring framework and C/C++? We're looking for someone who can use the JNI (Java Native Interface) to deliver high-quality software solutions.",
+        requireSkills: ["Java", "Spring", "JNI", "C/C++", "Problem-solving"],
         requirements: [
             "Bachelor's degree in Computer Science or related field",
-            "Proven experience in software development",
+            "Proven experience in Java software development, with a focus on Spring framework",
+            "Strong understanding of database integration concepts and technologies",
+            "Good knowledge of C programming language",
+            "Good knowledge of C++ programming language",
             "Strong leadership and project management skills",
             "Excellent communication and teamwork abilities",
             "Ability to prioritize tasks and meet deadlines"

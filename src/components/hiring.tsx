@@ -27,9 +27,9 @@ function Hiring() {
                 <p className="hiring__desc mt-2 text-wrap text-start">
                     Are you a talented and motivated individual looking for an exciting opportunity? Do you thrive in dynamic environments and enjoy collaborating with passionate professionals? If so, we would love to have you join our <span className="fw-light">team of innovators!</span> Explore new challenges, unleash your creativity, and make a meaningful impact with us.
                 </p>
-                <Row className="mt-4">
+                <Row className="mt-4 justify-content-center">
                     {JOB_CONFIG.map((job) => (
-                        <Col key={job.index} xs={6} md={4}>
+                        <Col className="mt-3" key={job.index} xs={12} sm={6} md={4} lg={4}>
                             <JobCard title={job.title} description={job.description} index={job.index} setShowModal={setShowModal}/>
                         </Col>
                     ))}
@@ -62,10 +62,10 @@ function JobCard({ title, description, index, setShowModal }: JobProps & { setSh
     const handleOpenModal = () => setShowModal(index);
 
     return (
-        <div className="job-card position-relative text-center overflow-hidden d-flex flex-column align-items-center px-5 py-4">
+        <div className="job-card position-relative text-center overflow-hidden d-flex flex-column align-items-center justify-content-between px-5 py-4">
             <h2 className="fw-light">{title}</h2>
             <p className="text-wrap text-center">{description}</p>
-            <Button onClick={handleOpenModal}>View Details</Button>
+            <Button className="mt-auto" onClick={handleOpenModal}>View Details</Button>
         </div>
     );
 }
@@ -93,8 +93,8 @@ function JobModal({ showModal, handleCloseModal }: { showModal: number | null; h
     }, [showModal]);
 
     return (
-        <Modal className="modal-lg" show={showModal !== null} onHide={handleCloseModal} centered>
-            <Modal.Header closeButton className="hiring__modal-header">
+        <Modal className="modal-lg" show={showModal !== null} onHide={handleCloseModal} centered dialogClassName="modal-scrollable">
+            <Modal.Header closeButton className="hiring__modal-header overflow-auto">
                 <Modal.Title className="fw-light">{jobModalContent?.title}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
