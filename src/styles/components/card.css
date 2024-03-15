@@ -1,5 +1,4 @@
 .game-card {
-    display: flex;
     background: var(--card-background);
     box-shadow: var(--card-shadow);
     height: 20rem;
@@ -18,14 +17,12 @@
 
 .game-header {
     flex: 60%;
-    padding: 1.25rem 2.25rem;
 }
 
 .header-header {
     font-size: 2.25rem;
     color: var(--body-color);
     font-family: var(--title-font);
-    font-weight: 300;
 }
 
 .header-header::after {
@@ -39,25 +36,15 @@
 
 .tags {
     color: #999;
-    margin-top: 10px;
     font-size: 0.9rem;
 }
 
 .game-description {
-    color: var(--body-color);
-    margin-top: 20px;
     font-size: 1.25em;
 }
 
 .game-description span {
-    color: var(--primary-color); /* Use your primary color variable */
     cursor: pointer;
-    font-family: var(--title-font);
-    font-weight: bolder;
-}
-
-.box-shadow {
-    box-shadow: var(--card-shadow);
 }
 
 .steam-btn {

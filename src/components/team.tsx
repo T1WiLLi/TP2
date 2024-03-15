@@ -49,13 +49,13 @@ const images: string[] = [img1, img2, img3, img4, img5, img6];
 
 function Team() {
     return(
-        <div id="team" className="team__content-wrapper mt-5">
+        <div id="team" className="content-wrapper mt-5">
             <Container>
-                <div className="team__header d-flex align-items-center gap-5">
-                    <h1 className="mb-0 fw-light" data-aos="fade-down" data-aos-duration="1500">The <span>Team</span></h1>
+                <div className="d-flex align-items-center gap-5">
+                    <h1 className="header mb-0 fw-light" data-aos="fade-down" data-aos-duration="1500">The <span className="sub-header">Team</span></h1>
                     <HorizontalRule/>
                 </div>
-                <p className="team__desc mt-2 text-wrap text-start">
+                <p className="desc mt-2 text-wrap text-start">
                     As a game studio, our passion drives us to create immersive worlds, captivating gameplay, and memorable experiences for players worldwide. With a team of talented developers, designers, and storytellers, we push the boundaries of gaming innovation, bringing dreams to life one pixel at a time.
                 </p>
                 <Row className="g-5 d-flex flex-row mb-5">
@@ -65,10 +65,10 @@ function Team() {
                         </Col>
                     ))}
                 </Row>
-                <h1 data-aos="fade-down" data-aos-duration="1500" className="team__studio-header d-block">
+                <h1 data-aos="fade-down" data-aos-duration="1500" className="small-header d-block position-relative">
                     Our Studio
                 </h1>
-                <p className="team__desc mt-2 text-wrap text-start">
+                <p className="desc mt-2 text-wrap text-start">
                     At Our Studio, creativity is our cornerstone. We blend passion and innovation to craft immersive gaming experiences that captivate players worldwide.
                 </p>
                 <Row className="team__studio-images g-2 mb-5">
@@ -86,19 +86,19 @@ function Team() {
 
 function ImageCard({ name, member }: ImageCardProps) {
     return (
-        <div className="team__card text-center position-relative overflow-hidden">
+        <div className="card team__card text-center position-relative overflow-hidden">
             <figure>
                 <img src={member.image} className="img-fluid" alt={name}/>
             </figure>
             <p className="team__card-name fw-bold mb-0">{name}</p>
             <p className="team__card-subtle">{member.role}</p>
-            <div className="team__hover-content position-absolute d-flex flex-column align-items-center justify-content-center">
+            <div className="team__hover-content text-light p-4 position-absolute top-0 left-0 bottom-0 right-0 d-flex flex-column align-items-center justify-content-center">
                 <p className="team__quote mb-1">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
                 <hr className="team__quote-divider mb-3" />
-                <div className="team__social-links d-flex">
-                    <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i className="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i className="fa-brands fa-linkedin-in"></i></a>
+                <div className="d-flex gap-3">
+                    <a href="#"><i className="fa-brands fa-facebook-f icon"></i></a>
+                    <a href="#"><i className="fa-brands fa-twitter icon"></i></a>
+                    <a href="#"><i className="fa-brands fa-linkedin-in icon"></i></a>
                 </div>
             </div>
         </div>

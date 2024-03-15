@@ -1,0 +1,97 @@
+h1.header {
+    color: var(--body-color);
+    font-family: var(--title-font);
+    font-size: 4em;
+}
+
+span.sub-header {
+    color: var(--primary-color);
+}
+
+div.content-wrapper {
+    height: 100%;
+}
+
+p.desc {
+    font-size: 1.25em;
+    color: var(--body-color);
+}
+
+.special {
+    color: var(--primary-color)!important;
+    font-family: var(--title-font)!important;
+}
+
+.body-color {
+    color: var(--body-color);
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.small-header {
+    color: var(--body-color);
+}
+
+.small-header::after {
+    content: '';
+    display: inherit;
+    width: 6rem;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin-top: 10px;
+}
+
+.border-primary-color {
+    border-bottom: 2px solid var(--primary-color)!important;
+}
+
+.card {
+    box-shadow: var(--card-shadow);
+    background: var(--card-background);
+    color: var(--body-color);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.box-shadow {
+    box-shadow: var(--card-shadow);
+}
+
+.card img {
+    border-bottom: 2px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.hr {
+  height: 3px;
+  background: var(--primary-color);
+  flex-grow: 1;
+  margin-top: 15px;
+}
+
+.grow-from-left {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.5s ease;
+}
+
+.grow-from-left.show {
+  transform: scaleX(1);
+}
+
+i.icon {
+    font-size: 1.25em;
+    transition: color ease-in-out 0.2s;
+}
+
+i.icon:hover {
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 400px) {
+    .modal-dialog {
+        height: 100%;
+    }
+}

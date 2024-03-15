@@ -24,12 +24,12 @@ const Card: React.FC<CardProps> = ({ id, gameImage, gameName, gameTags, gameDesc
             <div className="game-img position-relative">
                 <img src={gameImage} alt=""/>
             </div>
-            <div className="game-header">
-                <h2 className="header-header mt-0">{gameName}</h2>
-                <p className="tags"><span>{gameTags}</span></p>
-                <p className="game-description">
+            <div className="game-header p-4">
+                <h2 className="header-header mt-0 fw-light">{gameName}</h2>
+                <p className="tags mt-2"><span>{gameTags}</span></p>
+                <p className="game-description mt-2 body-color">
                     {gameDescription}
-                    <span onClick={handleReadMoreClick} data-target={id}> Read More</span>
+                    <span className="special fw-bolder" onClick={handleReadMoreClick} data-target={id}> Read More</span>
                 </p>
                 <div className="wrapper d-flex align-items-center justify-content-between mt-5">
                     <div className="steam-btn box-shadow">

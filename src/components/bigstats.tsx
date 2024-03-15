@@ -48,12 +48,12 @@ function BigStat() {
                     </div>
                 </div>
             </div>
-            <h2 className="bigstat__header mb-4" data-aos="zoom-in">We <span>Are</span></h2>
+            <h2 className="bigstat__header fw-light mb-4" data-aos="zoom-in">We <span className="sub-header">Are</span></h2>
             <Container className="d-flex flex-wrap justify-content-center">
                 {stats.map((item, index) => (
                     <div className="bigstat__stat rounded text-center m-2 p-1 py-4 px-3" data-aos="fade-up" data-aos-delay={`${index * 100 + 100}`} key={index}>
-                        <div className="bigstat__stat-content d-flex">
-                            <h3 className="m-0 d-flex align-items-center fw-bold">{item.count}</h3>
+                        <div className="bigstat__stat-content d-flex gap-3">
+                            <h3 className="m-0 d-flex align-items-center fw-bold position-relative">{item.count}</h3>
                             <h3 className="fw-bolder">{item.label}</h3>
                         </div>
                     </div>

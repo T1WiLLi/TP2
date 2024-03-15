@@ -34,15 +34,9 @@
 .bigstat__wrapper-stat h2 {
     color: #fff;
     font-family: var(--title-font);
-    font-weight: 200;
     word-spacing: 0.20em;
     font-size: clamp(3rem, 8vw, 6rem);
 }
-
-.bigstat__wrapper-stat h2 span {
-    color: var(--primary-color);
-}
-
 
 .bigstat__stat {
     background: var(--body-background);
@@ -56,11 +50,6 @@
     transform: translateY(-10px)!important;
 }
 
-.bigstat__stat-content {
-    gap: 0.5rem;
-    height: 100%;
-}
-
 .bigstat__stat-content h3 {
     color: var(--body-color);
     font-size: clamp(1.5rem, 3vw, 2rem);
@@ -68,7 +57,6 @@
 }
 
 .bigstat__stat h3:first-child {
-    position: relative;
     color: var(--primary-color);
     font-size: 4em;
 }
@@ -86,7 +74,6 @@
 
 .bigstat__stat h3:last-child {
     font-family: var(--title-font);
-    font-weight: 300;
 }
 
 @media (max-width: 768px) {

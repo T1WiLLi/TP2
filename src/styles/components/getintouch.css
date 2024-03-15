@@ -1,35 +1,5 @@
-.getintouch__content-wrapper {
-    height: 100%;
+.getintouch {
     margin-top: 12rem;
-}
-
-.getintouch__header h1 {
-    color: var(--body-color);
-    font-family: var(--title-font);
-    font-size: 4em;
-}
-
-.getintouch__header h1 span {
-    color: var(--primary-color);
-}
-
-.getintouch__desc {
-    color: var(--body-color);
-    font-size: 1.25em;
-}
-
-.getintouch__subline {
-    font-family: var(--title-font);
-    color: var(--body-color);
-}
-
-.getintouch__subline::after {
-    content: '';
-    display: inherit;
-    width: 10%;
-    height: 2px;
-    background-color: var(--primary-color);
-    margin-top: 10px;
 }
 
 .getintouch__form {
@@ -78,18 +48,6 @@
     color: var(--body-color);
     font-family: var(--title-font);
     box-shadow: var(--card-shadow);
-}
-
-.getintouch__contact-info i {
-    color: var(--primary-color);
-}
-
-.getintouch__contact-info p {
-    color: var(--primary-color);
-}
-
-.getintouch__contact-info span {
-    color: var(--body-color);
 }
 
 .getintouch__contact-info iframe {

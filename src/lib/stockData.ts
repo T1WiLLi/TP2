@@ -28,7 +28,6 @@ export class StockFetcher {
     }
 
     private formatStockData(data: any): any {
-        console.log(data);
         const stockPrice = data['Global Quote']['05. price'];
         const priceChange = data['Global Quote']['09. change'];
         const dailyHigh = data['Global Quote']['03. high'];

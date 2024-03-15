@@ -4,7 +4,6 @@ import Card from "./card";
 import CardModal from "../components/cardmodal";
 import { GAME_CONFIG } from "../config/gameConfig";
 import { GAME_MODAL_CONFIG } from "../config/gameModalConfig";
-import "../styles/components/gameportfolio.css";
 import acMirage from "../assets/images/game-sel/ac-mirage.webp";
 import acValhalla from "../assets/images/game-sel/ac-valhalla.jpg";
 import acOdyssey from "../assets/images/game-sel/ac-odyssey.jpg";
@@ -36,11 +35,11 @@ const GamePortfolio: React.FC = () => {
   };
 
   return (
-    <section id="games" className="game-portfolio d-flex">
+    <section id="games" className="my-5 d-flex">
       <Container className="max-width-container d-flex flex-column">
-        <div className="header-wrapper d-flex gap-5">
+        <div className="d-flex gap-5 align-items-center">
           <h1 className="header" data-aos="fade-down" data-aos-duration="1500">
-            Our <span>Games</span>
+            Our <span className="sub-header">Games</span>
           </h1>
           <HorizontalRule/>
         </div>

@@ -33,23 +33,23 @@ const details: Detail[] = [
 ];
 
 function renderIcon(icon:string) {
-    return <i className={`fa-solid fa-${icon}`}></i>
+    return <i className={`fa-solid fa-${icon} primary-color`}></i>
 }
 
 function GetInTouch() {
     return (
-        <div className="getintouch__content-wrapper mb-5">
+        <div className="content-wrapper getintouch">
             <Container>
                 <div className="getintouch__header d-flex align-items-center gap-5 mb-5">
-                    <h1 className="mb-0 fw-light" data-aos="fade-down" data-aos-duration="1500">Get In <span>Touch</span></h1>
+                    <h1 className="header mb-0 fw-light" data-aos="fade-down" data-aos-duration="1500">Get In <span className="sub-header">Touch</span></h1>
                     <HorizontalRule/>
                 </div>
-                <p className="getintouch__desc mt-2 text-wrap text-start">
+                <p className="desc mt-2 text-wrap text-start">
                     We would love to hear from you. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra laoreet dolor sit amet blandit. Ut suscipit nisl ut risus volutpat malesuada.
                 </p>
                 <Row className="mt-5">
                     <Col md={6} className="mb-5">
-                        <h2 className="fw-light getintouch__subline mb-4">Leave us a Message</h2>
+                        <h2 className="fw-light small-header mb-4">Leave us a Message</h2>
                         <Form className="getintouch__form px-3 py-4 d-flex flex-column gap-3">
                             <Form.Group className="mb-3" controlId="formName">
                                 <Form.Control type="text" required placeholder="Name*" className="getintouch__input" />
@@ -69,14 +69,14 @@ function GetInTouch() {
                         </Form>
                     </Col>
                     <Col md={6}>
-                        <h2 className="fw-light getintouch__subline mb-4">Our Details</h2> 
+                        <h2 className="fw-light small-header mb-4">Our Details</h2> 
                         <div className="getintouch__contact-info p-4">
                             <ul className="d-flex flex-column gap-3 p-0">
                                 {details.map((detail, index) => (
                                     <li className="d-flex flex-row gap-2 align-items-center" key={index}>
                                         {renderIcon(detail.icon)}
-                                        <p className="m-0">
-                                            <span className="fw-bold">{detail.detail}:  </span>
+                                        <p className="m-0 primary-color">
+                                            <span className="fw-bold body-color">{detail.detail}:  </span>
                                             {` ` + detail.value}
                                         </p>
                                     </li>

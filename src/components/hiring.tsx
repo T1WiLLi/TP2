@@ -15,17 +15,17 @@ function Hiring() {
     const [showModal, setShowModal] = useState<number | null>(null);
     const handleCloseModal = () => setShowModal(null);
     return(
-        <div id="careers" className="hiring__content-wrapper mt-5 mb-5">
+        <div id="careers" className="content-wrapper mt-5 mb-5">
             <Container>
                 <div className="hiring__header d-flex align-items-center gap-5 mb-5">
-                    <h1 className="mb-0 fw-light" data-aos="fade-down" data-aos-duration="1500">We're <span>Hiring</span></h1>
+                    <h1 className="header mb-0 fw-light" data-aos="fade-down" data-aos-duration="1500">We're <span className="sub-header">Hiring</span></h1>
                     <HorizontalRule/>
                 </div>
-                <h1 data-aos="fade-down" data-aos-duration="1500" className="hiring__job-header d-block">
+                <h1 data-aos="fade-down" data-aos-duration="1500" className="small-header d-block">
                     Job Openings
                 </h1>
-                <p className="hiring__desc mt-2 text-wrap text-start">
-                    Are you a talented and motivated individual looking for an exciting opportunity? Do you thrive in dynamic environments and enjoy collaborating with passionate professionals? If so, we would love to have you join our <span className="fw-light">team of innovators!</span> Explore new challenges, unleash your creativity, and make a meaningful impact with us.
+                <p className="desc mt-2 text-wrap text-start">
+                    Are you a talented and motivated individual looking for an exciting opportunity? Do you thrive in dynamic environments and enjoy collaborating with passionate professionals? If so, we would love to have you join our <span className="fw-light special">team of innovators!</span> Explore new challenges, unleash your creativity, and make a meaningful impact with us.
                 </p>
                 <Row className="mt-4 justify-content-center">
                     {JOB_CONFIG.map((job) => (
@@ -36,16 +36,16 @@ function Hiring() {
                 </Row>
                 <Row className="justify-content-center mt-5 mb-5">
                     <Col className="justify-content-center d-flex" md={8}>
-                        <div className="hiring__newsletter justify-content-center d-flex flex-column">
+                        <div className="hiring__newsletter p-3 justify-content-center d-flex flex-column">
                             <h1 className="fw-light mb-4 text-center position-relative">Our Newsletter</h1>
-                            <p className="text-center">Stay up to date with the team and our products by subscribing to our newsletter.</p>
+                            <p className="text-center body-color">Stay up to date with the team and our products by subscribing to our newsletter.</p>
                             <Form>
                                 <Row className="g-0 align-items-center">
                                     <Col>
-                                        <Form.Control className="hiring__newsletter-input" type="email" placeholder="Enter your email" />
+                                        <Form.Control className="hiring__newsletter-input p-2" type="email" placeholder="Enter your email" />
                                     </Col>
                                     <Col xs="auto">
-                                        <Button className="hiring__newsletter-button" variant="primary" type="submit">Subscribe</Button>
+                                        <Button className="hiring__newsletter-button px-3 py-2" variant="primary" type="submit">Subscribe</Button>
                                     </Col>
                                 </Row>
                             </Form>
@@ -63,7 +63,7 @@ function JobCard({ title, description, index, setShowModal }: JobProps & { setSh
 
     return (
         <div className="job-card position-relative text-center overflow-hidden d-flex flex-column align-items-center justify-content-between px-5 py-4">
-            <h2 className="fw-light">{title}</h2>
+            <h2 className="fw-light special">{title}</h2>
             <p className="text-wrap text-center">{description}</p>
             <Button className="mt-auto" onClick={handleOpenModal}>View Details</Button>
         </div>
@@ -100,11 +100,11 @@ function JobModal({ showModal, handleCloseModal }: { showModal: number | null; h
             <Modal.Body>
                 {jobModalContent && (
                     <>
-                        <h5 className="hiring__modal-header-text fw-light">
+                        <h5 className="hiring__modal-header-text body-color fw-light">
                             <span className="fw-light">The Ideal Candidate: </span><br/>
                             {jobModalContent.idealCandidate}
                         </h5>
-                        <p className="d-flex gap-2 hiring__modal-require-skill">
+                        <p className="d-flex gap-2 hiring__modal-require-skill body-color">
                             {jobModalContent.requireSkills.map((skill, index) => (
                                 <span className="d-flex justify-content-center align-items-center" key={index}>{skill}</span>
                             ))}
@@ -112,11 +112,11 @@ function JobModal({ showModal, handleCloseModal }: { showModal: number | null; h
                         <h5 className="hiring__modal-requirement-header fw-light">Requirements:</h5>
                         <ul className="hiring__modal-requirement-item">
                             {jobModalContent.requirements.map((requirement, index) => (
-                                <li key={index}>{requirement}</li>
+                                <li className="body-color" key={index}>{requirement}</li>
                             ))}
                         </ul>
                         <h5 className="hiring__modal-howToApply-header fw-light">How to Apply:</h5>
-                        <p className="hiring__modal-howToApply-desc mb-0">{jobModalContent.howToApply} <span className="fw-light">careers@example.com.</span></p>
+                        <p className="hiring__modal-howToApply-desc body-color mb-0">{jobModalContent.howToApply} <span className="fw-light primary-color">careers@example.com.</span></p>
                     </>
                 )}
             </Modal.Body>

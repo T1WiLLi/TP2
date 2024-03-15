@@ -15,8 +15,8 @@ function Home() {
         <>
             <CookieConsent/>
             <Navbar/>
-            <section className="landing-section position-relative d-flex flex-row justify-content-center">
-                <div className="background-wrapper position-absolute overflow-hidden">
+            <section data-section="ls" className="vh-100 position-relative d-flex flex-row justify-content-center">
+                <div className="background-wrapper vh-100 position-absolute overflow-hidden">
                     <ParticleBackground />
                 </div>
                 <div className="header-quote d-flex justify-content-center align-items-center text-center" data-aos="zoom-in" data-aos-duration="1500">

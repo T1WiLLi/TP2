@@ -34,7 +34,7 @@ function Investor() {
     const [loading, setLoading] = useState(true);
     const apiKey = 'ZTC3LVLRSA9SOS4J';
     const stockSymbol = 'UBSFY'; 
-    const fetchStockDataEnabled = false; // Set to true to fetch data from the API! 
+    const fetchStockDataEnabled = true; // Set to true to fetch data from the API! 
     const newsImages: string[] = [new1, new2, new3];
 
     useEffect(() => {
@@ -56,7 +56,6 @@ function Investor() {
     }, [fetchStockDataEnabled]);
 
     const renderStockInfo = () => {
-        console.log(stockData);
         const stockInfo = [
             { label: 'Stock Price', value: `$${stockData?.stockPrice}`, change: `${stockData?.priceChange}` },
             { label: 'Daily High', value: `$${stockData?.dailyHigh}` },
@@ -73,16 +72,16 @@ function Investor() {
     };
 
     return (
-        <div id="investor" className="investor__content-wrapper mt-5 py-5">
+        <div id="investor" className="content-wrapper mt-5 py-5">
             <div className="investor__header position-relative">
-                <img src={bg} alt="" />
+                <img className="vh-75" src={bg} alt="" />
                 <h1 className="position-absolute fw-bolder">Investors Center</h1>
             </div>
             <Container className="mb-5">
                 {loading ? (
                     <p>Loading...</p>
                 ) : (
-                    <Row className="investor__info-row mb-0 mt-5">
+                    <Row className="investor__info mb-0 mt-5 pr-3">
                         <Col md={9}>
                             <div className="investor__info d-flex justify-content-between">
                                 {renderStockInfo()}
@@ -93,15 +92,15 @@ function Investor() {
                         </Col>
                     </Row>
                 )}
-                <div className="investor__info-date mt-2 mb-0">
-                    <p>{stockData && stockData.lastTradingTime + ' ' + renderLastTradingTime(stockData.lastTradingTime)}</p>
+                <div className="investor__info-date mt-2">
+                    <p className="mb-0">{stockData && stockData.lastTradingTime + ' ' + renderLastTradingTime(stockData.lastTradingTime)}</p>
                     <p>Data Provided by AlphaVantage. Minimum 20 minutes delayed.</p>
                 </div>
                 <h1 className="investor__newsroom-header mt-5 mb-4">Newsroom</h1>
                 <Row className="g-4">
                     {news.map((newsItem, index) => (
                         <Col className="g-4" key={index} md={6}>
-                            <div className="news-card overflow-hidden">
+                            <div className="card news-card overflow-hidden">
                                 <img className="img-fluid mb-4" src={newsImages[index]} alt="image"/>
                                 <h3 className="px-4 mb-1 fw-bold">{newsItem.title}</h3>
                                 <p className="date px-4 mb-1">{newsItem.date.toLocaleDateString()}</p>
