@@ -18,7 +18,7 @@ function renderIcon(icon:string) {
 }
 
     return(
-        <footer className="footer py-3 d-flex align-items-center">
+        <footer className="footer mt-5 py-3 d-flex align-items-center">
             <Container>
                 <Row>
                     <Col md={12} className="d-flex">
