@@ -23,15 +23,27 @@ p.desc {
 }
 
 .body-color {
-    color: var(--body-color);
+    color: var(--body-color)!important;
 }
 
 .primary-color {
-    color: var(--primary-color);
+    color: var(--primary-color)!important;
 }
 
 .small-header {
-    color: var(--body-color);
+    color: var(--body-color)!important;
+}
+
+.button-primary {
+    background: var(--primary-color)!important;
+    border: var(--primary-color)!important;
+    color: #FFF!important;
+    transition: all ease-in-out 0.2s;
+}
+
+.button-primary:hover {
+    background-color: #e39149;
+    border-color: #e39149;
 }
 
 .small-header::after {

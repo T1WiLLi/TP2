@@ -6,21 +6,6 @@
     height: 100%;
 }
 
-.job-card p {
-    color: var(--body-color);
-}
-
-.job-card button {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-    transition: all ease-in-out 0.2s;
-}
-
-.job-card button:hover {
-    background-color: #e39149;
-    border-color: #e39149;
-}
-
 .hiring__modal-header,
 .hiring__modal-footer {
     border-color: var(--primary-color);
@@ -51,17 +36,6 @@
     padding: 5px;
     border-radius: 10px;
     border: 1px solid var(--primary-color);
-}
-
-.hiring__modal-footer button:last-child {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-.hiring__modal-footer button:last-child:hover {
-    text-decoration: underline;
-    background-color: #e39149;
-    border-color: #e39149;
 }
 
 .hiring__newsletter {

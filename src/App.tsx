@@ -6,6 +6,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 // import { StockFetcher } from "./lib/stockData";
 import Home from "./pages/home"
 import Preloader from "./utils/preloader";
+import Inactivity from "./utils/inactivity";
 
 function App() {
     useEffect(() => {
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <Preloader/>
+      <Inactivity/>
       <Home/>
     </>
   );

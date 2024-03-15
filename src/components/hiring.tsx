@@ -64,8 +64,8 @@ function JobCard({ title, description, index, setShowModal }: JobProps & { setSh
     return (
         <div className="job-card position-relative text-center overflow-hidden d-flex flex-column align-items-center justify-content-between px-5 py-4">
             <h2 className="fw-light special">{title}</h2>
-            <p className="text-wrap text-center">{description}</p>
-            <Button className="mt-auto" onClick={handleOpenModal}>View Details</Button>
+            <p className="text-wrap text-center body-color">{description}</p>
+            <Button className="mt-auto button-primary" onClick={handleOpenModal}>View Details</Button>
         </div>
     );
 }
@@ -122,7 +122,7 @@ function JobModal({ showModal, handleCloseModal }: { showModal: number | null; h
             </Modal.Body>
             <Modal.Footer className="hiring__modal-footer justify-content-start">
                 <Button variant="secondary" onClick={handleCloseModal}>Close</Button>
-                <Button variant="primary">Apply</Button>
+                <Button className="button-primary" variant="primary">Apply</Button>
             </Modal.Footer>
         </Modal>
     );
