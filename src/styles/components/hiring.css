@@ -155,6 +155,7 @@
 
 .hiring__newsletter-input:focus, .hiring__newsletter-input:active {
     border: 2px solid #fff!important;
+    box-shadow: var(--card-shadow)!important;
     outline: none!important;
     box-shadow: none!important;
 }

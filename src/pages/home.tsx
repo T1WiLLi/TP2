@@ -7,6 +7,7 @@ import ParticleBackground from "../utils/particles";
 import Team from "../components/team";
 import Investor from "../components/investor";
 import Hiring from "../components/hiring";
+import GetInTouch from "../components/getintouch";
 
 function Home() {
     return (
@@ -26,6 +27,7 @@ function Home() {
             <Team/>
             <Investor/>
             <Hiring/>
+            <GetInTouch/>
         </>
     );
 }

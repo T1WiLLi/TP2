@@ -34,7 +34,7 @@ function Investor() {
     const [loading, setLoading] = useState(true);
     const apiKey = 'ZTC3LVLRSA9SOS4J';
     const stockSymbol = 'UBSFY'; 
-    const fetchStockDataEnabled = true; // Set to true to fetch data from the API! 
+    const fetchStockDataEnabled = false; // Set to true to fetch data from the API! 
     const newsImages: string[] = [new1, new2, new3];
 
     useEffect(() => {
