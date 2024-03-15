@@ -75,7 +75,7 @@ function Investor() {
         <div id="investor" className="content-wrapper mt-5 py-5">
             <div className="investor__header position-relative">
                 <img className="vh-75" src={bg} alt="" />
-                <h1 className="position-absolute fw-bolder">Investors Center</h1>
+                <h1 className="position-absolute fw-bolder text-center">Investors Center</h1>
             </div>
             <Container className="mb-5">
                 {loading ? (

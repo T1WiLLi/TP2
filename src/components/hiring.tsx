@@ -21,7 +21,7 @@ function Hiring() {
                     <h1 className="header mb-0 fw-light" data-aos="fade-down" data-aos-duration="1500">We're <span className="sub-header">Hiring</span></h1>
                     <HorizontalRule/>
                 </div>
-                <h1 data-aos="fade-down" data-aos-duration="1500" className="small-header d-block">
+                <h1 data-aos="fade-down" data-aos-duration="1500" data-aos-delay="250" className="small-header d-block">
                     Job Openings
                 </h1>
                 <p className="desc mt-2 text-wrap text-start">

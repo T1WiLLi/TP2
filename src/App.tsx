@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 // import { StockFetcher } from "./lib/stockData";
 import Home from "./pages/home"
+import Preloader from "./utils/preloader";
 
 function App() {
     useEffect(() => {
@@ -12,6 +13,7 @@ function App() {
     }, []);
   return (
     <>
+      <Preloader/>
       <Home/>
     </>
   );

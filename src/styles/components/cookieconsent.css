@@ -4,8 +4,8 @@
     left: 20px;
     max-width: 300px;
     height: fit-content;
-    background: var(--body-background);
-    color: var(--body-color);
+    background: var(--body-background)!important;
+    color: var(--body-color)!important;
 }
 
 .cookie__consent-box .cookie__body-content {
@@ -21,4 +21,9 @@
 .cookie__consent-box .modal-footer button:hover {
     background-color: rgb(228, 134, 50, 0.8);
     border-color: rgb(228, 134, 50, 0.8);
+}
+
+.cookie__consent-box .cookie__consent-header,
+.cookie__consent-box .cookie__body-content {
+    color: #000;
 }
