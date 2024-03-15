@@ -37,8 +37,8 @@
     background: var(--card-background);
 }
 
-.getintouch__form input, 
-.getintouch__form textarea {
+.getintouch__input,
+.getintouch__textarea {
     background: none;
     color: var(--body-color);
     border: none;
@@ -46,29 +46,29 @@
     border-bottom: 1px solid var(--primary-color);
 }
 
-.getintouch__form input:focus, 
-.getintouch__form textarea:focus {
-    color: var(--body-color);
+.getintouch__input:focus,
+.getintouch__textarea:focus {
     background: none;
     border-bottom: 1px solid var(--primary-color);
-    outline: none!important;
-    box-shadow: none!important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
-.getintouch__form input::placeholder,
-.getintouch__form textarea::placeholder {
+.getintouch__input::placeholder,
+.getintouch__textarea::placeholder {
     color: var(--body-color);
     opacity: 0.75;
 }
 
-.getintouch__form button {
-    width: 30%;
+.getintouch__button {
+    width: 50%;
     border-radius: 0;
     background-color: var(--primary-color);
     border-color: var(--primary-color);
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
-.getintouch__form button:hover {
+.getintouch__button:hover {
     background-color: #e39149;
     border-color: #e39149;
 }

@@ -52,18 +52,18 @@ function GetInTouch() {
                         <h2 className="fw-light getintouch__subline mb-4">Leave us a Message</h2>
                         <Form className="getintouch__form px-3 py-4 d-flex flex-column gap-3">
                             <Form.Group className="mb-3" controlId="formName">
-                                <Form.Control type="text" required placeholder="Name*" />
+                                <Form.Control type="text" required placeholder="Name*" className="getintouch__input" />
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formEmail">
-                                <Form.Control type="email" required placeholder="Email*" />
+                                <Form.Control type="email" required placeholder="Email*" className="getintouch__input" />
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formMessage">
-                                <Form.Control as="textarea" required rows={3} placeholder="Message*" />
+                                <Form.Control as="textarea" required rows={3} placeholder="Message*" className="getintouch__textarea" />
                             </Form.Group>
 
-                            <Button variant="primary" type="submit">
+                            <Button variant="primary" type="submit" className="getintouch__button">
                                 SEND MESSAGE
                             </Button>
                         </Form>
