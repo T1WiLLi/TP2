@@ -22,16 +22,17 @@ p.desc {
     font-family: var(--title-font)!important;
 }
 
+
 .body-color {
     color: var(--body-color)!important;
 }
 
-.primary-color {
-    color: var(--primary-color)!important;
+.background-color {
+    color: var(--body-background);
 }
 
-.small-header {
-    color: var(--body-color)!important;
+.primary-color {
+    color: var(--primary-color)!important;
 }
 
 .button-primary {
@@ -44,6 +45,10 @@ p.desc {
 .button-primary:hover {
     background-color: #e39149;
     border-color: #e39149;
+}
+
+.small-header {
+    color: var(--body-color)!important;
 }
 
 .small-header::after {

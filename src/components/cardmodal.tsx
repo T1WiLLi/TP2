@@ -20,16 +20,16 @@ const CardModal: React.FC<ModalProps> = ({ isOpen, onClose, gameName, gameData }
             </Modal.Header>
             <Modal.Body className="border-primary-color">
                 <div className="modal-section mb-4">
-                    <h6 className="small-header">{gameData.header1}</h6>
+                    <h6 className="special">{gameData.header1}</h6>
                     <p>{gameData.text1}</p>
                 </div>
                 <div className="modal-section mb-4">
-                    <h6 className="small-header">{gameData.header2}</h6>
+                    <h6 className="special">{gameData.header2}</h6>
                     <p>{gameData.text2}</p>
                 </div>
             </Modal.Body>
-            <Modal.Footer>
-                <Button variant="secondary" onClick={onClose}>
+            <Modal.Footer className="d-flex justify-content-start">
+                <Button className="button-primary" variant="secondary" onClick={onClose}>
                     Close
                 </Button>
             </Modal.Footer>

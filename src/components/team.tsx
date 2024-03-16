@@ -88,7 +88,7 @@ function ImageCard({ name, member }: ImageCardProps) {
     return (
         <div className="card team__card text-center position-relative overflow-hidden">
             <figure>
-                <img src={member.image} className="img-fluid" alt={name}/>
+                <img src={member.image} className="img-fluid box-shadow" alt={name}/>
             </figure>
             <p className="team__card-name fw-bold mb-0">{name}</p>
             <p className="team__card-subtle">{member.role}</p>
