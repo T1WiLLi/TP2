@@ -1,3 +1,12 @@
+interface stockdata {
+    "stockPrice": number;
+    "priceChange": number;
+    "dailyHigh": number;
+    "dailyLow": number;
+    "dailyVolume": number;
+    "lastTradingTime": number;
+}
+
 export class StockFetcher {
     private apiKey: string;
     private apiUrl: string;
@@ -27,7 +36,7 @@ export class StockFetcher {
         }
     }
 
-    private formatStockData(data: any): any {
+    private formatStockData(data: any): stockdata {
         const stockPrice = data['Global Quote']['05. price'];
         const priceChange = data['Global Quote']['09. change'];
         const dailyHigh = data['Global Quote']['03. high'];
