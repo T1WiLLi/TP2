@@ -24,3 +24,12 @@ To start the development server and view the website, run the following command:
 This will start the development server and open the website in your default web browser. You can then begin working on the project.
 
 Feel free to explore the codebase and contribute to the project!
+
+
+# Version Control Information 
+
+## NodeJS version used for this project : v20.11.0
+## NPM version used for this project : 10.5.0
+## Vite version used in this project : ^5.1.4
+## Typescript version used in this project : ^5.2.2
+## React version used in this project : ^18.2.0
