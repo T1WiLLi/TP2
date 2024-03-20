@@ -25,6 +25,10 @@ This will start the development server and open the website in your default web 
 
 Feel free to explore the codebase and contribute to the project!
 
+## Important note : 
+
+**The API provided by AlphaVantage only work a given amount of time (25 / Daily) Because of that, if you ever happen to reload the website more than 25 times in a 24 hours span. The investor center section will be impacted**
+
 
 # Version Control Information 
 
