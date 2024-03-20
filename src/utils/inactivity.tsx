@@ -38,7 +38,7 @@ function Inactivity() {
     return(
         <div>
             <Modal show={showInactiveMessage} onHide={() => setShowInactiveMessage(false)} centered>
-                <Modal.Header className="border-primary-color" closeButton>
+                <Modal.Header className="border-primary-color p-2" closeButton>
                     <Modal.Title className="special">Are you still active on the site?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="d-flex gap-3">

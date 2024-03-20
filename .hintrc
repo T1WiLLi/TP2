@@ -14,6 +14,12 @@
           "text-decoration-skip-ink"
         ]
       }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
     ]
   }
 }
